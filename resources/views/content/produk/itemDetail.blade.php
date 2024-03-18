@@ -4,7 +4,7 @@
     <section class='mx-5'>
         <div class='grid-cols-2 item-detail align-items-center py-5'>
             <div>
-                <img src="{{ asset($item->image) }}" alt="">
+                <img class='item-image' src="{{ asset($item->image) }}" alt="">
             </div>
             <div>
                 <div class='pb-3 border-bottom'>

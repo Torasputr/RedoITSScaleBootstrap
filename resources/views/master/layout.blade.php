@@ -30,13 +30,13 @@
         </div>
         <div class="search-container">
           <input type="text" placeholder="" class='rounded-pill border'>
-          <i class="fas fa-search search-icon p-1 text-xl rounded-circle"></i>
+          <i class="fas fa-search search-icon p-1 text-md rounded-circle"></i>
         </div>
       </div>
     </header>
     @yield('content')
     {{-- Footer --}}
-    <footer class='p-4'>
+    <footer class='p-5'>
       <div class='grid-cols-2 align-items-center'>
         <div class='alamat'>
           <div>

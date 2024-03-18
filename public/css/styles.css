@@ -166,6 +166,7 @@ footer {
     height: 15rem;
     width: 100%;
     object-fit: cover;
+    background-color: white;
 }
 .category-name {
     color: black;
@@ -194,7 +195,21 @@ footer {
     border: 2px solid var(--primary);
     transition-duration: 300ms;
 }
+.item-image {
+    width: 100%;
+}
 .item-detail {
-    gap: 10rem;
+    gap: 4rem;
+}
+.brands {
+    background-color: var(--gray-100);
+}
+.brands img {
+    width: 100%;
+    object-fit: cover;
+}
+.brands:hover {
+    scale: 105%;
+    transition-duration: 300ms;
 }
 

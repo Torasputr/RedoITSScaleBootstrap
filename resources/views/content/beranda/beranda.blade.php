@@ -33,7 +33,7 @@
                     @endforeach
                 </div>
                 <a href="/produk">
-                    <h1 class='selengkapnya pt-3 text-xl text-end'>SELENGKAPNYA >></h1>
+                    <h1 class='selengkapnya pt-3 text-xl fw-bold text-end'>SELENGKAPNYA >></h1>
                 </a>
             </div>
         </div>
