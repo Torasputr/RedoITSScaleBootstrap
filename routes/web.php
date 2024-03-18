@@ -19,3 +19,4 @@ Route::get('/produk/retail', [PageController::class, 'retail']);
 Route::get('/produk/retail/{s_alt}', [PageController::class, 'retailItem']);
 Route::get('/produk/retail/{s_alt}/{i_alt}', [PageController::class, 'retailItemDetails']);
 Route::get('/produk/accessoriessparepart', [PageController::class, 'accspare']);
+Route::get('/artikel', [PageController::class, 'artikel']);

@@ -29,7 +29,7 @@
           <a class='navbar-link' href="/kontak">Kontak</a>
         </div>
         <div class="search-container">
-          <input type="text" placeholder="" class='rounded-pill border'>
+          <input type="text" placeholder="Telusuri Produk Disini..." class='rounded-pill border italic'>
           <i class="fas fa-search search-icon p-1 text-md rounded-circle"></i>
         </div>
       </div>

@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Accspare;
 use App\Models\Atex;
 use App\Models\Brand;
 use App\Models\Labmed;
 use App\Models\Retail;
 use App\Models\Antiair;
+use App\Models\Article;
+use App\Models\Artikel;
+use App\Models\Accspare;
 use App\Models\Category;
 use App\Models\Logindus;
 use App\Models\Subretail;
@@ -20,7 +22,9 @@ class PageController extends Controller
     public function beranda() {
         $sliders = HomepageSlider::latest()->take(3)->get();
         $categories = Category::latest()->take(3)->get();
-        return view("content.beranda.beranda", compact('sliders', 'categories'));
+        $latestArticle = Article::orderBy('date', 'desc')->first();
+        $articles = Article::orderBy('date', 'desc')->whereNotIn('id', [$latestArticle->id])->get();
+        return view("content.beranda.beranda", compact('sliders', 'categories', 'articles', 'latestArticle', 'articles'));
     }
     public function kategori() {
         $categories = Category::all();
@@ -131,6 +135,10 @@ class PageController extends Controller
         $alt = 'laboratoriummedical';
         $title = 'Bench Scale';
         return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
+    }
+    public function artikel() {
+        $articles = Article::all();
+        return view('content.artikel.artikel', compact('articles'));
     }
 }
 
