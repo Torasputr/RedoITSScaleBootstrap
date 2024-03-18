@@ -51,7 +51,7 @@
                 </a>
                 <div class='grid-cols-2 artikel'>
                     @foreach($articles as $article)
-                        <a href="">
+                        <a href="{{ $article->id }}">
                             <div class='artikel-container p-3 rounded'>
                                 <img class='artikel-image-smol rounded' src="{{ asset($article->thumbnail) }}" alt="">
                                 <h1 class='text-lg text-justify pt-3 text-truncate'>{{ $article->title }}</h1>

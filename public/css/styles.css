@@ -204,6 +204,19 @@ footer {
 .artikel {
     gap: 1rem;
 }
+.artikel-container h1 {
+    color: black;
+}
+
+.artikel-container:hover {
+    box-shadow: black;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 300ms;
+}
+
+.artikel-container:hover h1 {
+    color: var(--primary);
+}
 
 /* Produk */
 .brochure {
@@ -234,9 +247,10 @@ footer {
     transition-duration: 300ms;
 }
 
+
 /* Artikel */
 .artikel-banner {
     width: 100%;
     height: 10rem;
+    background-image: url('/images/artikel/artikelBg.jpg');
 }
-
