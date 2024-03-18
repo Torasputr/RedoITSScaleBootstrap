@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'beranda']);
+Route::get('/produk', [PageController::class, 'kategori']);
+Route::get('/produk/antiair', [PageController::class, 'antiair']);
+Route::get('/produk/antiair/{alt}', [PageController::class, 'antiairDetail']);
