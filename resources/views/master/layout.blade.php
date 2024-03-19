@@ -30,7 +30,7 @@
         </div>
         <div class="search-container">
           <input type="text" placeholder="Telusuri Produk Disini..." class='rounded-pill border italic'>
-          <i class="fas fa-search search-icon p-1 text-md rounded-circle"></i>
+          <i class="fas fa-search search-icon p-1 text-sm rounded-circle"></i>
         </div>
       </div>
     </header>
@@ -55,29 +55,29 @@
           </div>
         </div>
         <div class='newsletter'>
-          <h1 class='text-center newsletter-text fw-bold'>BERLANGGANAN KE NEWSLETTER KAMI</h1>
-          <div class='d-flex justify-content-center gap-2 py-3'>
+          <h1 class='text-center newsletter-text fw-bold text-2xl'>BERLANGGANAN KE NEWSLETTER KAMI</h1>
+          <div class='d-flex justify-content-center gap-2 register-search'>
             <input type="text">
-            <button class='fw-bold'>REGISTER</button>
+            <button class='fw-bold register-button'>REGISTER</button>
           </div>
-          <div class='d-flex justify-content-around align-items-center pt-2'>
+          <div class='d-flex justify-content-around align-items-center'>
             <a href="">
-              <i class="fa-brands fa-facebook-f text-3xl border rounded-circle newsletter-icon-facebook"></i>
+              <i class="fa-brands fa-facebook-f text-2xl border rounded-circle newsletter-icon-facebook"></i>
             </a>
             <a href="">
-              <i class="fa-brands fa-tiktok text-3xl border rounded-circle newsletter-icon"></i>
+              <i class="fa-brands fa-tiktok text-2xl border rounded-circle newsletter-icon"></i>
             </a>
             <a href="">
-              <i class="fa-brands fa-instagram text-3xl border rounded-circle newsletter-icon"></i>
+              <i class="fa-brands fa-instagram text-2xl border rounded-circle newsletter-icon"></i>
             </a>
             <a href="">
-              <i class="fa-brands fa-youtube text-3xl border rounded-circle newsletter-icon-youtube"></i>
+              <i class="fa-brands fa-youtube text-2xl border rounded-circle newsletter-icon-youtube"></i>
             </a>
             <a href="">
-              <i class="fa-brands fa-linkedin-in text-3xl border rounded-circle newsletter-icon"></i>
+              <i class="fa-brands fa-linkedin-in text-2xl border rounded-circle newsletter-icon"></i>
             </a>
             <a href="">
-              <i class="fa-brands fa-x-twitter text-3xl border rounded-circle newsletter-icon"></i>
+              <i class="fa-brands fa-x-twitter text-2xl border rounded-circle newsletter-icon-x"></i>
             </a>
           </div>
         </div>
@@ -92,7 +92,29 @@
     <script>
         var swiper = new Swiper('#homepage-slider', {
             loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            }
         });
     </script>
+    {{-- Brand Slider JS --}}
+    <script>
+        var swiper = new Swiper('.brands-section', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        }
+    });
+    </script>
+    {{-- General Script JS --}}
+    <script src='{{ asset('js/script.js') }}'></script>
   </body>
 </html>

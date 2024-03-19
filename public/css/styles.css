@@ -113,12 +113,27 @@ footer {
 }
 
 .newsletter input {
-    width: 100%;
+    width: 75%;
 }
 
 .newsletter button {
     background-color: white;
     color: var(--primary);
+    border: solid 1px var(--primary);
+}
+.newsletter button:hover {
+    background-color: var(--secondary);
+    color: white;
+    transition-duration: 300ms;
+}
+
+.register-search {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.icons {
+    padding-top: 5rem;
 }
 
 .newsletter-icon-facebook {
@@ -136,6 +151,11 @@ footer {
     padding: 0.75rem 0.6rem 0.75rem 0.6rem;
 }
 
+.newsletter-icon-x {
+    color: white;
+    padding: 0.75rem 0.7rem 0.75rem 0.7rem;
+}
+
 .newsletter-icon:hover {
     background-color: white;
     color:var(--primary);
@@ -147,6 +167,11 @@ footer {
     transition-duration: 300ms;
 }
 .newsletter-icon-youtube:hover {
+    background-color: white;
+    color:var(--primary);
+    transition-duration: 300ms;
+}
+.newsletter-icon-x:hover {
     background-color: white;
     color:var(--primary);
     transition-duration: 300ms;
@@ -218,6 +243,7 @@ footer {
     color: var(--primary);
 }
 
+
 /* Produk */
 .brochure {
     color: white;
@@ -247,10 +273,187 @@ footer {
     transition-duration: 300ms;
 }
 
+.client {
+    width: 100%;
+}
+.youtube-beranda {
+    background-color: var(--gray-100);
+}
 
 /* Artikel */
 .artikel-banner {
     width: 100%;
-    height: 10rem;
+    height: 22rem;
     background-image: url('/images/artikel/artikelBg.jpg');
+}
+
+.article-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Karir */
+.karir-banner {
+    width: 100%;
+    height: 22rem;
+    object-fit: cover;
+}
+
+.search-karir {
+    position: relative;
+    width: 100%;
+    border: solid 2px var(--primary);
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.search-icon-karir {
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    color: var(--primary);
+}
+.search-button-karir {
+    background-color: var(--primary);
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: solid 1px var(--primary);
+}
+.search-button-karir:hover {
+    background-color: white;
+    border: solid 1.5px var(--primary);
+    color: var(--primary);
+    transition-duration: 150ms;
+}
+
+.career-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.career-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Ensure the image covers the container */
+    z-index: -1; /* Place the image behind other content */
+}
+
+.career-card button {
+    border: solid 1px var(--primary);
+    background-color: var(--primary);
+    color: white;
+}
+
+.career-card:hover {
+    transition-duration: 300ms;
+    color: var(--primary);
+    scale: 110%;
+}
+
+.career-card button:hover {
+    background-color: white;
+    color: var(--primary);
+    transition-duration: 300ms;
+    border: solid 2px var(--primary);
+}
+
+/* Tentang */
+.tentang-banner {
+    width: 100%;
+    height: 22rem;
+}
+
+.tentang-body {
+    background-color: var(--gray-100);
+}
+
+.milestone img {
+    width: 100%;
+}
+.milestone button {
+    background-color: white;
+    border: solid 2px var(--primary);
+    color: var(--primary);
+}
+
+.milestone button:hover {
+    background-color: var(--primary);
+    color: white;
+    transition-duration: 300ms;
+}
+
+.visi-button {
+    background-color: var(--primary);
+    color: white;
+    border: solid 1px var(--primary);
+}
+.misi-button {
+    background-color: var(--secondary);
+    color: white;
+    border: solid 1px var(--secondary);
+}
+
+.visi-button:hover {
+    color: var(--primary);
+    background-color: white;
+    border: solid 3px var(--primary);
+    transition-duration: 300ms;
+}
+.misi-button:hover {
+    color: var(--secondary);
+    background-color: white;
+    border: solid 3px var(--secondary);
+    transition-duration: 300ms;
+}
+.visi-title {
+    color: var(--primary);
+}
+.misi-title {
+    color: var(--secondary);
+}
+.kebmut-img {
+    width: 100%;
+    object-fit: cover;
+}
+.sertif-button {
+    border: none;
+    background: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+}
+.sertif-thumbnail {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    background-color: white;
+}
+.sertif-thumbnail:hover {
+    scale: 110%;
+    transition-duration: 300ms;
+}
+
+.contact {
+    gap: 2.2rem;
+}
+
+.location-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.location-button h1:hover {
+    color: var(--secondary);
+    transition-duration: 300ms;
 }

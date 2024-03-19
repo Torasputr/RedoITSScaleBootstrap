@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Atex;
 use App\Models\Brand;
+use App\Models\Career;
 use App\Models\Labmed;
 use App\Models\Retail;
 use App\Models\Antiair;
@@ -24,7 +25,8 @@ class PageController extends Controller
         $categories = Category::latest()->take(3)->get();
         $latestArticle = Article::orderBy('date', 'desc')->first();
         $articles = Article::orderBy('date', 'desc')->whereNotIn('id', [$latestArticle->id])->get();
-        return view("content.beranda.beranda", compact('sliders', 'categories', 'articles', 'latestArticle', 'articles'));
+        $brands = Brand::all();
+        return view("content.beranda.beranda", compact('sliders', 'categories', 'articles', 'latestArticle', 'articles', 'brands'));
     }
     public function kategori() {
         $categories = Category::all();
@@ -115,8 +117,7 @@ class PageController extends Controller
         $alt = 'retail';
         $title = 'Retail';
         return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
-    }
-    public function accspare() {
+    }    public function accspare() {
         $title = 'Accessories & Sparepart';
         $alt = 'accessoriessparepart';
         $brands = Brand::whereIn('id', Accspare::distinct()->pluck('brand_id'))->get();
@@ -137,8 +138,21 @@ class PageController extends Controller
         return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
     }
     public function artikel() {
-        $articles = Article::all();
+        $articles = Article::orderBy('date', 'desc')->get();
         return view('content.artikel.artikel', compact('articles'));
     }
+    public function artikelDetail($id) {
+        $article = Article::findOrFail($id);
+        return view('content.artikel.artikelDetail', compact('article'));
+    }
+    public function karir() {
+        $careers = Career::all();
+        return view('content.karir.karir', compact('careers'));
+    }
+    public function tentang() {
+        return view('content.tentang.tentang');
+    }
+    public function kontak() {
+        return view('content.kontak.kontak');
+    }
 }
-

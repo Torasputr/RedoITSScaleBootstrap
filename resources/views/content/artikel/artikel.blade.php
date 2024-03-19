@@ -6,7 +6,7 @@
     </div>
     <div class='grid-cols-3 py-5 mx-5'>
         @foreach($articles as $article)
-        <a href="/artikel/{{ $article->alt }}">
+        <a href="/artikel/{{ $article->id }}">
             <div class='category-card p-3 rounded'>
                 <img class='category-image rounded' src="{{ asset($article->thumbnail) }}" alt="">
                 <h1 class='text-lg pt-2 category-name text-truncate'>{{ $article->title }}</h1>

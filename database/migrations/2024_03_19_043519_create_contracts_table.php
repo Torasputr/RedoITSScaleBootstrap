@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('antiairs', function (Blueprint $table) {
+        Schema::create('contracts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('image');
-            $table->string('alt');
-            $table->string('name');
-            $table->string('description');
-            $table->string('brochure');
         });
     }
 
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('antiairs');
+        Schema::dropIfExists('contracts');
     }
 };

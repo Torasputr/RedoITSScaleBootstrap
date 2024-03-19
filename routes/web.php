@@ -20,3 +20,7 @@ Route::get('/produk/retail/{s_alt}', [PageController::class, 'retailItem']);
 Route::get('/produk/retail/{s_alt}/{i_alt}', [PageController::class, 'retailItemDetails']);
 Route::get('/produk/accessoriessparepart', [PageController::class, 'accspare']);
 Route::get('/artikel', [PageController::class, 'artikel']);
+Route::get('/artikel/{id}', [PageController::class, 'artikelDetail']);
+Route::get('/karir', [PageController::class, 'karir']);
+Route::get('/tentang-kami', [PageController::class, 'tentang']);
+Route::get('/kontak', [PageController::class, 'kontak']);
