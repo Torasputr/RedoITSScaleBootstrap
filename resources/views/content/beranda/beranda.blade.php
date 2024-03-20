@@ -1,6 +1,14 @@
 @extends('master.layout')
 @section('title', 'ITS Scale - Beranda')
 @section('content')
+    {{-- Popup Start --}}
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <span class="close-button rounded-circle px-2 fw-semibold" onclick="closePopup()">X</span>
+            <img src="{{ asset('images/Beranda/PopupRamadhan.png') }}" alt="Popup Image">
+        </div>
+    </div>
+    {{-- Popup End --}}
     {{-- Slider Start --}}
     <section class=''>
         <div class="swiper-container" id='homepage-slider'>
@@ -58,27 +66,6 @@
                                 <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
                             </div>
                         </a>
-                        <a href="artikel/{{ $article->id }}">
-                            <div class='artikel-container p-3 rounded'>
-                                <img class='artikel-image-smol rounded' src="{{ asset($article->thumbnail) }}" alt="">
-                                <h1 class='text-lg text-justify pt-3 text-truncate'>{{ $article->title }}</h1>
-                                <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
-                            </div>
-                        </a>
-                        <a href="artikel/{{ $article->id }}">
-                            <div class='artikel-container p-3 rounded'>
-                                <img class='artikel-image-smol rounded' src="{{ asset($article->thumbnail) }}" alt="">
-                                <h1 class='text-lg text-justify pt-3 text-truncate'>{{ $article->title }}</h1>
-                                <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
-                            </div>
-                        </a>
-                        <a href="artikel/{{ $article->id }}">
-                            <div class='artikel-container p-3 rounded'>
-                                <img class='artikel-image-smol rounded' src="{{ asset($article->thumbnail) }}" alt="">
-                                <h1 class='text-lg text-justify pt-3 text-truncate'>{{ $article->title }}</h1>
-                                <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
-                            </div>
-                        </a>
                     @endforeach
                 </div>
             </div>
@@ -92,7 +79,7 @@
         {{-- Brands Start --}}
         <div>
             <h1 class='subtitle text-center fw-bold text-3xl mt-3'>BRAND KAMI</h1>
-            <div class='brands-section my-5 swiper-container'>
+            <div class='brands-section swiper-container'>
                 <div class="swiper-wrapper">
                     @foreach($brands as $brand)
                     <div class="swiper-slide">

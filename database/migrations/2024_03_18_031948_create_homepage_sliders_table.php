@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('homepage_sliders', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('image');
+            $table->string('alt');
+            $table->string('link');
         });
     }
 

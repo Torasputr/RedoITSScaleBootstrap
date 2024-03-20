@@ -67,7 +67,7 @@ class PageController extends Controller
         $items = Logindus::where('sublogindus_id', $subcategory->id)->get();
         $alt = 'logistikindustri';
         $sub_alt = $s_alt;
-        $title = 'Bench Scale';
+        $title = $subcategory->name;
         return view('content.produk.subkategoriItems', compact('items', 'alt', 'title', 'sub_alt'));
     }
     public function logindusItemDetails($s_alt, $i_alt) {

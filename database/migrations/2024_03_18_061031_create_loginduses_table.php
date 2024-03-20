@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('alt');
             $table->string('name');
+            $table->string('brochure');
         });
     }
 

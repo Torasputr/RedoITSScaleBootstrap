@@ -1,3 +1,13 @@
+function closePopup() {
+    var popupOverlay = document.getElementById("popupOverlay");
+    popupOverlay.style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var popupOverlay = document.getElementById("popupOverlay");
+    popupOverlay.style.display = "block";
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     function showMilestoneText(year) {
         const texts = document.querySelectorAll('.milestone-text');

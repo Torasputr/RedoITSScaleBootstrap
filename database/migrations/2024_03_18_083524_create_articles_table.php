@@ -17,13 +17,13 @@ return new class extends Migration
             $table->string('title');
             $table->string('thumbnail');
             $table->string('thumbnail_alt');
-            $table->string('author_id');
+            $table->foreignId('author_id')->constrained('authors')->onDelete('cascade');
             $table->date('date');
-            $table->string('paragraph1');
+            $table->text('paragraph1');
             $table->string('image1');
             $table->string('image1_alt');
             $table->string('image1_source');
-            $table->string('paragraph2');
+            $table->text('paragraph2');
             $table->string('image2');
             $table->string('image2_alt');
             $table->string('image2_source');
