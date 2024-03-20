@@ -58,6 +58,27 @@
                                 <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
                             </div>
                         </a>
+                        <a href="artikel/{{ $article->id }}">
+                            <div class='artikel-container p-3 rounded'>
+                                <img class='artikel-image-smol rounded' src="{{ asset($article->thumbnail) }}" alt="">
+                                <h1 class='text-lg text-justify pt-3 text-truncate'>{{ $article->title }}</h1>
+                                <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
+                            </div>
+                        </a>
+                        <a href="artikel/{{ $article->id }}">
+                            <div class='artikel-container p-3 rounded'>
+                                <img class='artikel-image-smol rounded' src="{{ asset($article->thumbnail) }}" alt="">
+                                <h1 class='text-lg text-justify pt-3 text-truncate'>{{ $article->title }}</h1>
+                                <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
+                            </div>
+                        </a>
+                        <a href="artikel/{{ $article->id }}">
+                            <div class='artikel-container p-3 rounded'>
+                                <img class='artikel-image-smol rounded' src="{{ asset($article->thumbnail) }}" alt="">
+                                <h1 class='text-lg text-justify pt-3 text-truncate'>{{ $article->title }}</h1>
+                                <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
+                            </div>
+                        </a>
                     @endforeach
                 </div>
             </div>
@@ -94,7 +115,7 @@
                 <h1 class='subtitle fw-bold'>Temukan Kami di YouTube</h1>
             </div>
             <div>
-                <iframe class='rounded' width="700" height="382" src="https://www.youtube.com/embed/a8wcWSvza1E?si=6apIrOFfY1a7_K46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class='rounded' width="700" height="394" src="https://www.youtube.com/embed/a8wcWSvza1E?si=6apIrOFfY1a7_K46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
         {{-- Youtube End --}}

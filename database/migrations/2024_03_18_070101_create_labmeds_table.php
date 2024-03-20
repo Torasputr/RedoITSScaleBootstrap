@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('labmeds', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('brand_id')->constrained('brands')->onDelete('cascade');
+            $table->string('name');
+            $table->string('image');
+            $table->string('alt');
+            $table->string('description');
+            $table->string('brochure');
         });
     }
 

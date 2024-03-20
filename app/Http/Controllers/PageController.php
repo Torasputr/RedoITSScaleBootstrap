@@ -21,7 +21,7 @@ use App\Models\HomepageSlider;
 class PageController extends Controller
 {
     public function beranda() {
-        $sliders = HomepageSlider::latest()->take(3)->get();
+        $sliders = HomepageSlider::orderBy('id', 'desc')->take(3)->get();
         $categories = Category::latest()->take(3)->get();
         $latestArticle = Article::orderBy('date', 'desc')->first();
         $articles = Article::orderBy('date', 'desc')->whereNotIn('id', [$latestArticle->id])->get();
@@ -125,7 +125,7 @@ class PageController extends Controller
     }
     public function accspareItems($b_alt) {
         $title = $b_alt;
-        $alt = 'laboratoriummedical';
+        $alt = 'accessoriessparepart';
         $sub_alt = $b_alt;
         $brand = Brand::where('alt', $b_alt)->firstOrFail();
         $items = Accspare::where('brand_id', $brand->id)->get();
@@ -133,7 +133,7 @@ class PageController extends Controller
     }
     public function accspareItemDetails($s_alt, $i_alt) {
         $item = Accspare::where('alt', $i_alt)->firstOrFail();
-        $alt = 'laboratoriummedical';
+        $alt = 'accesoriessparepart';
         $title = 'Bench Scale';
         return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
     }

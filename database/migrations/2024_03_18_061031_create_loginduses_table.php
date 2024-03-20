@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('loginduses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('sublogindus_id')->constrained('subloginduses')->onDelete('cascade');
+            $table->string('image');
+            $table->string('alt');
+            $table->string('name');
         });
     }
 

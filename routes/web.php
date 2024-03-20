@@ -19,6 +19,8 @@ Route::get('/produk/retail', [PageController::class, 'retail']);
 Route::get('/produk/retail/{s_alt}', [PageController::class, 'retailItem']);
 Route::get('/produk/retail/{s_alt}/{i_alt}', [PageController::class, 'retailItemDetails']);
 Route::get('/produk/accessoriessparepart', [PageController::class, 'accspare']);
+Route::get('/produk/accessoriessparepart/{b_alt}', [PageController::class, 'accspareItems']);
+Route::get('/produk/accessoriessparepart/{b_alt}/{i_alt}', [PageController::class, 'accspareItemDetails']);
 Route::get('/artikel', [PageController::class, 'artikel']);
 Route::get('/artikel/{id}', [PageController::class, 'artikelDetail']);
 Route::get('/karir', [PageController::class, 'karir']);

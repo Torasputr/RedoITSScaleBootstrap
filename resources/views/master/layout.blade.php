@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class='newsletter'>
-          <h1 class='text-center newsletter-text fw-bold text-2xl'>BERLANGGANAN KE NEWSLETTER KAMI</h1>
+          <h1 class='text-center newsletter-text fw-bold text-2xl text-justify'>BERLANGGANAN KE NEWSLETTER KAMI</h1>
           <div class='d-flex justify-content-center gap-2 register-search'>
             <input type="text">
             <button class='fw-bold register-button'>REGISTER</button>

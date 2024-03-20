@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('retails', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('subretail_id')->constrained('subretails')->onDelete('cascade');
+            $table->string('image');
+            $table->string('alt');
+            $table->string('name');
+            $table->string('description');
+            $table->string('brochure');
         });
     }
 
