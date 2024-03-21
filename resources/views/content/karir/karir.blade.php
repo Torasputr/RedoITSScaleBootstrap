@@ -31,7 +31,11 @@
                         </div>
                     </div>
                     <div class='d-flex justify-content-end'>
-                        <button class='mt-4 rounded p-1 px-3 justify-content-end fw-semibold'>Apply Now</button>
+                        <a href='/{{ $career->position->name }}/{{ $career->location->location }}/{{ $career->contract->type }}' onclick="showPopup()" class='mt-4 rounded p-1 px-3 justify-content-end fw-semibold'>Apply Now</a>
+                        {{-- <div id="popup" style="display: none;">
+                            <!-- Popup content goes here -->
+                            This is a popup!
+                        </div> --}}
                     </div>
                 </div>
             @endforeach

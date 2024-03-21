@@ -331,9 +331,17 @@ footer {
     background-image: url('/images/artikel/artikelBg.jpg');
 }
 
+.image-container {
+    height: 500px;
+}
+
 .article-image {
     width: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
+}
+
+.paragraph {
+    line-height: 1.5;
 }
 
 /* Karir */
@@ -388,7 +396,7 @@ footer {
     z-index: -1; /* Place the image behind other content */
 }
 
-.career-card button {
+.career-card a {
     border: solid 1px var(--primary);
     background-color: var(--primary);
     color: white;
@@ -400,11 +408,101 @@ footer {
     scale: 110%;
 }
 
-.career-card button:hover {
+.career-card a:hover {
     background-color: white;
     color: var(--primary);
     transition-duration: 300ms;
     border: solid 2px var(--primary);
+}
+.popup-karir {
+    background-color: var(--gray-100);
+}
+
+.popup-karir .banner {
+    width: 100%;
+}
+
+.popup-karir .position-name {
+    color: var(--secondary);
+}
+
+.popup-daftar {
+    border: solid 1px var(--primary);
+    background-color: var(--primary);
+    color: white;
+}
+
+.footer-karir-popup {
+    background-color: #F2ECEC;
+}
+
+.popup-daftar:hover {
+    background-color: white;
+    color: var(--primary);
+    transition-duration: 300ms;
+    border: solid 2px var(--primary);
+}
+
+.popup-icon-facebook {
+    color: white;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    background-color: var(--primary);
+}
+
+.popup-icon-facebook:hover {
+    color: var(--primary);
+    background-color: white;
+    transition-duration: 300ms;
+}
+
+.popup-icon {
+    color: white;
+    padding: 0.75rem 0.85rem 0.75rem 0.85rem;
+    background-color: var(--primary);
+    border: solid 1px var(--primary);
+}
+.popup-icon:hover {
+    color: var(--primary);
+    background-color: white;
+    transition-duration: 300ms;
+}
+
+.popup-icon-youtube {
+    color: white;
+    padding: 0.75rem 0.6rem 0.75rem 0.6rem;
+    background-color: var(--primary);
+    border: solid 1px var(--primary);
+}
+
+.popup-icon-youtube:hover {
+    color: var(--primary);
+    background-color: white;
+    transition-duration: 300ms;
+}
+
+.popup-icon-x {
+    color: white;
+    padding: 0.75rem 0.7rem 0.75rem 0.7rem;
+    background-color: var(--primary);
+    border: solid 1px var(--primary);
+}
+
+.popup-icon-x:hover {
+    color: var(--primary);
+    background-color: white;
+    transition-duration: 300ms;
+}
+
+.popup-tutup {
+    border: solid 1px var(--secondary);
+    background-color: var(--secondary);
+    color: white;
+}
+.popup-tutup:hover {
+    background-color: white;
+    color: var(--secondary);
+    transition-duration: 300ms;
+    border: solid 2px var(--secondary);
 }
 
 /* Tentang */

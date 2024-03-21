@@ -9,18 +9,22 @@
         </div>
         <div class='pt-3 grid-cols-2 gap-5 align-items-center'>
             <div>
-                <h1 class='text-sm text-justify fw-normal'>{{ $article->paragraph1 }}</h1>
+                <h1 class='text-sm text-justify fw-normal paragraph'>{{ $article->paragraph1 }}</h1>
                 <div class='border p-3 pb-1 mt-3'>
-                    <img class='article-image' src="{{ asset($article->image1) }}" alt="">
+                    <div class='image-container d-flex justify-content-center'>
+                        <img class='article-image' src="{{ asset($article->image1) }}" alt="">
+                    </div>
                     <h1 class='text-sm fw-light pt-2'>Sumber: {{ $article->image1_source }}</h1>
                 </div>
             </div>
             <div>
                 <div class='border p-3 pb-1'>
-                    <img class='article-image' src="{{ asset($article->image2) }}" alt="">
+                    <div class='image-container d-flex justify-content-center'>
+                        <img class='article-image' src="{{ asset($article->image2) }}" alt="">
+                    </div>
                     <h1 class='text-sm fw-light pt-2'>Sumber: {{ $article->image2_source }}</h1>
                 </div>
-                <h1 class='text-sm text-justify fw-normal mt-3'>{{ $article->paragraph2 }}</h1>
+                <h1 class='text-sm text-justify fw-normal mt-3 paragraph'>{{ $article->paragraph2 }}</h1>
             </div>
         </div>
     </section>

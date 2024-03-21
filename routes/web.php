@@ -26,3 +26,6 @@ Route::get('/artikel/{id}', [PageController::class, 'artikelDetail']);
 Route::get('/karir', [PageController::class, 'karir']);
 Route::get('/tentang-kami', [PageController::class, 'tentang']);
 Route::get('/kontak', [PageController::class, 'kontak']);
+Route::get('/karir/popup', function() {
+    return view('content.karir.popup');
+});
