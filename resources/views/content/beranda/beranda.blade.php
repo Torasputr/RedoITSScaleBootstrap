@@ -5,7 +5,7 @@
     <div class="popup-overlay" id="popupOverlay">
         <div class="popup-content">
             <span class="close-button rounded-circle px-2 fw-semibold" onclick="closePopup()">X</span>
-            <img class='img-fluid' style='' src="{{ asset('images/Beranda/PopupRamadhan.png') }}" alt="Popup Image" width="1000" height="300">
+            <img class='img-fluid' style='width: 200%' src="{{ asset('images/Beranda/PopupRamadhan.png') }}" alt="Popup Image" width="1000" height="300">
         </div>
     </div>
     {{-- Popup End --}}
@@ -51,6 +51,7 @@
         {{-- Artikel Start --}}
         <div>
             <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>ARTIKEL</h1>
+            {{-- Artikel Desktop Start --}}
             <div class='grid-cols-2 artikel align-items-center'>
                 <a href="/artikel/{{ $latestArticle->id }}">
                     <div class='artikel-container rounded p-3'>
@@ -71,6 +72,10 @@
                     @endforeach
                 </div>
             </div>
+            {{-- Artikel Desktop End --}}
+            {{-- Artikel Mobile Start --}}
+
+            {{-- Artikel Mobile End --}}
             <a href="/artikel">
                 <h1 class='selengkapnya pt-3 text-xl fw-bold text-end'>SELENGKAPNYA >></h1>
             </a>

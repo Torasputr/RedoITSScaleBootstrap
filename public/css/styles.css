@@ -283,7 +283,11 @@ footer {
 .artikel-container:hover h1 {
     color: var(--primary);
 }
-
+.artikel-image {
+    max-height: 8rem;
+    width: 100%;
+    object-fit: cover;
+}
 
 /* Produk */
 .brochure {
@@ -329,13 +333,20 @@ footer {
 }
 
 .image-container {
-    height: 500px;
+    height: 360px;
 }
-
 .article-image {
     width: 100%;
     object-fit: scale-down;
 }
+/* .image-container {
+    width: 40%;
+}
+
+.article-image {
+    width: 100%;
+    object-fit: scale-down; */
+/* } */
 
 .paragraph {
     line-height: 1.5;
