@@ -5,7 +5,7 @@
     <div class="popup-overlay" id="popupOverlay">
         <div class="popup-content">
             <span class="close-button rounded-circle px-2 fw-semibold" onclick="closePopup()">X</span>
-            <img src="{{ asset('images/Beranda/PopupRamadhan.png') }}" alt="Popup Image">
+            <img class='img-fluid' style='' src="{{ asset('images/Beranda/PopupRamadhan.png') }}" alt="Popup Image" width="1000" height="300">
         </div>
     </div>
     {{-- Popup End --}}
@@ -27,28 +27,30 @@
     <section class='mx-5'>
         {{-- Kategori Start --}}
         <div>
-            <h1 class='text-center pt-5 text-3xl fw-bold subtitle'>KATEGORI PRODUK</h1>
-            <div>
-                <div class='grid-cols-3 pt-5'>
+            <h3 class='text-center subtitle fw-bold pt-5 pb-3'>KATEGORI PRODUK</h1>
+            <div class='container'>
+                <div class='row pt-4'>
                     @foreach ($categories as $category)
-                        <a href="/produk/{{ $category->alt }}">
-                            <div class='category-card p-3 rounded'>
-                                <img class='category-image rounded' src="{{ asset($category->image) }}" alt="">
-                                <h1 class='text-2xl pt-2 category-name fw-'>{{ $category->name }}</h1>
-                                <h1 class='category-name text-sm'>{{ $category->description }}</h1>
+                        <div class='col-md-4 category-card-container'>
+                            <div class='category-card rounded p-3'>
+                                <img class='category-image' src="{{ asset($category->image) }}" alt="">
+                                <div class='category-name'>
+                                    <h3 class='pt-2 fs-3  fw-semibold text-truncate'>{{ $category->name }}</h3>
+                                    <h6 class='pt-1 fs-6 fw-normal text-truncate'>{{ $category->description }}</h6>
+                                </div>
                             </div>
-                        </a>
+                        </div>
                     @endforeach
+                    <div class='d-flex justify-content-end '>
+                        <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>SELENGKAPNYA >></a>
+                    </div>
                 </div>
-                <a href="/produk">
-                    <h1 class='selengkapnya pt-3 text-xl fw-bold text-end'>SELENGKAPNYA >></h1>
-                </a>
             </div>
         </div>
         {{-- Kategori End --}}
         {{-- Artikel Start --}}
         <div>
-            <h1 class='text-center pt-3 pb-5 text-3xl fw-bold subtitle'>ARTIKEL</h1>
+            <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>ARTIKEL</h1>
             <div class='grid-cols-2 artikel align-items-center'>
                 <a href="/artikel/{{ $latestArticle->id }}">
                     <div class='artikel-container rounded p-3'>

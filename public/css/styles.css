@@ -55,109 +55,98 @@ a {
 }
 
 /* Header & Footer */
-.its-logo {
-    height: 5rem;
+header {
+    position: fixed;
+    background-color: white;
 }
 
-.logo-title {
+.navbar .brand .logo {
+    max-height: 4rem;
+}
+
+.navbar .brand .company-name {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: medium;
+}
+
+.navbar .brand .motto {
+    color: var(--secondary);
+    font-weight: normal;
+    font-size: small
+}
+
+.offcanvas-title {
+    font-weight: bold;
     color: var(--primary);
 }
 
-.logo-subtitle {
-    color: var(--secondary);
-}
-
-.navbar-link {
-    text-decoration: none;
+.nav-link {
     color: var(--primary);
 }
-
-.navbar-link:hover {
+.nav-link:hover {
     color: var(--secondary);
-    transition-duration: 300ms;
 }
 
-.search-container {
-    position: relative;
+.content {
+    margin-top: 6rem;
 }
 
-input[type="text"] {
-    padding-left: 1rem;
-    padding-right: 4rem;
+.desktop {
+    display: none;
 }
 
-.search-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0rem;
-    cursor: pointer;
-    background-color: var(--primary);
-    color: white;
-}
+
 footer {
     background-color: var(--primary);
+    width: 100%;
 }
-
-.footer-map {
+.location .title {
+    color: white;
+}
+.location .mapicon {
     color: var(--secondary);
-    padding-bottom: 0.5rem;
 }
-
-.footer-cabang {
+.location h6 {
     color: white;
 }
-
-.footer-alamat {
+.newsletter .title {
     color: white;
 }
-
-.newsletter-text {
-    color: white;
-}
-
-.newsletter input {
+.newsletter .box {
     width: 75%;
 }
-
-.newsletter button {
+.newsletter .button {
+    border: 1px solid var(--primary);
     background-color: white;
     color: var(--primary);
-    border: solid 1px var(--primary);
+    transition-duration: 300ms;
 }
-.newsletter button:hover {
+.newsletter .button:hover {
+    border: 1px solid var(--secondary);
     background-color: var(--secondary);
     color: white;
     transition-duration: 300ms;
 }
 
-.register-search {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-.icons {
-    padding-top: 5rem;
-}
-
 .newsletter-icon-facebook {
     color: white;
-    padding: 0.75rem 1rem 0.75rem 1rem;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
 .newsletter-icon {
     color: white;
-    padding: 0.75rem 0.85rem 0.75rem 0.85rem;
+    padding: 0.5rem 0.6rem 0.5rem 0.6rem;
 }
 
 .newsletter-icon-youtube {
     color: white;
-    padding: 0.75rem 0.6rem 0.75rem 0.6rem;
+    padding: 0.5rem 0.35rem 0.5rem 0.35rem;
 }
 
 .newsletter-icon-x {
     color: white;
-    padding: 0.75rem 0.7rem 0.75rem 0.7rem;
+    padding: 0.5rem 0.45rem 0.5rem 0.45rem;
 }
 
 .newsletter-icon:hover {
@@ -181,6 +170,8 @@ footer {
     transition-duration: 300ms;
 }
 
+
+
 /* Beranda */
 .popup-overlay {
     display: none;
@@ -190,7 +181,7 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
+    z-index: 99999;
 }
 .popup-content {
     position: absolute;
@@ -204,7 +195,7 @@ footer {
     width: auto;
 }
 .popup-content img {
-    height: 40rem;
+    object-fit: cover;
 }
 .close-button {
     position: absolute;
@@ -220,16 +211,16 @@ footer {
     background-color: var(--gray-100);
     transition-duration: 300ms;
 }
-
 .slider-image {
     width: 100%;
-    height: 650px;
+    max-height: 650px;
 }
 .subtitle {
     color: var(--primary);
 }
 .category-card {
     background-color: var(--gray-100);
+    transition-duration: 300ms;
 }
 .category-card:hover {
     box-shadow: black;
@@ -237,10 +228,8 @@ footer {
     transition-duration: 300ms;
 }
 .category-image {
-    height: 15rem;
+    max-height: 20rem;
     width: 100%;
-    object-fit: cover;
-    background-color: white;
 }
 .category-name {
     color: black;
@@ -250,8 +239,16 @@ footer {
     transition-duration: 300ms;
     color: var(--primary);
 }
+
+@media (max-width: 991px) {
+    .category-card-container {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
 .selengkapnya {
     color: var(--primary);
+    transition-duration: 300ms;
 }
 .selengkapnya:hover {
     color: var(--secondary);
@@ -598,4 +595,56 @@ footer {
 .location-button h1:hover {
     color: var(--secondary);
     transition-duration: 300ms;
+}
+
+@media (min-width: 991px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+    .newsletter-icon-facebook {
+        color: white;
+        padding: 0.75rem 1rem 0.75rem 1rem;
+    }
+
+    .newsletter-icon {
+        color: white;
+        padding: 0.75rem 0.85rem 0.75rem 0.85rem;
+    }
+
+    .newsletter-icon-youtube {
+        color: white;
+        padding: 0.75rem 0.6rem 0.75rem 0.6rem;
+    }
+
+    .newsletter-icon-x {
+        color: white;
+        padding: 0.75rem 0.7rem 0.75rem 0.7rem;
+    }
+
+    .newsletter-icon:hover {
+        background-color: white;
+        color:var(--primary);
+        transition-duration: 300ms;
+    }
+    .newsletter-icon-facebook:hover {
+        background-color: white;
+        color:var(--primary);
+        transition-duration: 300ms;
+    }
+    .newsletter-icon-youtube:hover {
+        background-color: white;
+        color:var(--primary);
+        transition-duration: 300ms;
+    }
+    .newsletter-icon-x:hover {
+        background-color: white;
+        color:var(--primary);
+        transition-duration: 300ms;
+    }
+    .newsletter .box {
+        width: 100%;
+    }
 }
