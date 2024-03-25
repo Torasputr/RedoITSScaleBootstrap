@@ -24,7 +24,7 @@ class PageController extends Controller
         $sliders = HomepageSlider::orderBy('id', 'desc')->take(3)->get();
         $categories = Category::latest()->take(3)->get();
         $latestArticle = Article::orderBy('date', 'desc')->first();
-        $articles = Article::orderBy('date', 'desc')->whereNotIn('id', [$latestArticle->id])->get();
+        $articles = Article::orderBy('date', 'desc')->whereNotIn('id', [$latestArticle->id])->take(4)->get();
         $brands = Brand::all();
         return view("content.beranda.beranda", compact('sliders', 'categories', 'articles', 'latestArticle', 'articles', 'brands'));
     }
@@ -138,7 +138,7 @@ class PageController extends Controller
         return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
     }
     public function artikel() {
-        $articles = Article::orderBy('date', 'desc')->get();
+        $articles = Article::orderBy('date', 'desc')->simplePaginate(9);
         return view('content.artikel.artikel', compact('articles'));
     }
     public function artikelDetail($id) {
