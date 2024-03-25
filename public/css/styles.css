@@ -355,7 +355,7 @@ footer {
 /* Karir */
 .karir-banner {
     width: 100%;
-    height: 22rem;
+    height: 30rem;
     object-fit: cover;
 }
 
@@ -516,7 +516,7 @@ footer {
 /* Tentang */
 .tentang-banner {
     width: 100%;
-    height: 22rem;
+    height: 100%;
 }
 
 .tentang-body {

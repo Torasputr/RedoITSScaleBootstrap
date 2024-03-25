@@ -3,7 +3,7 @@
 @section('content')
     <section>
         {{-- Banner Image Start --}}
-        <img class='karir-banner' src="{{ asset('images/karir/banner.png') }}" alt="">
+        <img class='karir-banner' src="{{ asset('images/karir/banner.jpg') }}" alt="">
         {{-- Banner Image End --}}
         {{-- Search Box Start --}}
         <div class='mx-5 py-5 position-relative'>
