@@ -48,10 +48,9 @@
             </div>
         </div>
         {{-- Kategori End --}}
-        {{-- Artikel Start --}}
-        <div>
+        {{-- Artikel Desktop Start --}}
+        <div class='desktop'>
             <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>ARTIKEL</h1>
-            {{-- Artikel Desktop Start --}}
             <div class='grid-cols-2 artikel align-items-center'>
                 <a href="/artikel/{{ $latestArticle->id }}">
                     <div class='artikel-container rounded p-3'>
@@ -72,46 +71,95 @@
                     @endforeach
                 </div>
             </div>
-            {{-- Artikel Desktop End --}}
-            {{-- Artikel Mobile Start --}}
-
-            {{-- Artikel Mobile End --}}
-            <a href="/artikel">
-                <h1 class='selengkapnya pt-3 text-xl fw-bold text-end'>SELENGKAPNYA >></h1>
-            </a>
+            <div class='d-flex justify-content-end '>
+                <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>SELENGKAPNYA >></a>
+            </div>
         </div>
-        {{-- Artikel End --}}
+        {{-- Artikel Dekstop End --}}
+        {{-- Artikel Mobile Start --}}
+        <div class='mobile'>
+            <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>ARTIKEL</h1>
+            <div class='d-flex flex-column'>
+                <div>
+                    <a href="{{ $latestArticle->id }}">
+                        <div class='d-flex align-items-center gap-3 w-full artikel-mobile p-2'>
+                            <div>
+                                <img src="{{ asset($latestArticle->thumbnail) }}" alt="">
+                            </div>
+                            <div class="truncate-container">
+                                <h6 class='truncate'>{{ $latestArticle->title }}</h6>
+                                <h6 class='text-end fw-light'>{{ $latestArticle->date }}</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @foreach($articles as $article)
+                <div class='pt-2'>
+                    <a href="{{ $article->id }}">
+                        <div class='d-flex align-items-center gap-3 w-full artikel-mobile p-2'>
+                            <div>
+                                <img src="{{ asset($article->thumbnail) }}" alt="">
+                            </div>
+                            <div class="truncate-container">
+                                <h6 class='text-truncate'>{{ $article->title }}</h6>
+                                <h6 class='text-end fw-light'>{{ $article->date }}</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+                <div class='d-flex justify-content-end '>
+                    <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>SELENGKAPNYA >></a>
+                </div>
+            </div>
+        </div>
+        {{-- Artikel Mobile End --}}
     </section>
     <section>
-        {{-- Brands Start --}}
-        <div>
+        {{-- Brands Desktop Start --}}
+        <div class='desktop'>
             <h1 class='subtitle text-center fw-bold text-3xl mt-3'>BRAND KAMI</h1>
             <div class='brands-section swiper-container'>
                 <div class="swiper-wrapper">
                     @foreach($brands as $brand)
                     <div class="swiper-slide">
-                        <img src="{{ asset($brand->image) }}" alt="">
+                        <img class='brands-beranda' src="{{ asset($brand->image) }}" alt="">
                     </div>
                     @endforeach
                 </div>
             </div>
         </div>
-        {{-- Brands End --}}
+        {{-- Brands Desktop End --}}
+        {{-- Brands Mobile Start --}}
+        <div class='mobile'>
+            <h1 class='subtitle text-center fw-bold text-3xl mt-5'>BRAND KAMI</h1>
+            <div class='brands-section-mobile swiper-container'>
+                <div class="swiper-wrapper">
+                    @foreach($brands as $brand)
+                    <div class="swiper-slide">
+                        <img class='brand-mobile' src="{{ asset($brand->image) }}" alt="">
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        {{-- Brands Mobile End --}}
         {{-- Client Start --}}
-        <div>
-            <h1 class='text-center subtitle text-3xl fw-bold'>CLIENT KAMI</h1>
-            <img class='pt-3 client' src="{{ asset('images/Beranda/Klien.png') }}" alt="">
+        <div class='mb-5'>
+            <h1 class='text-center subtitle text-3xl fw-bold mb-4'>CLIENT KAMI</h1>
+            <img class='img-fluid client' src="{{ asset('images/Beranda/Klien.png') }}" alt="">
         </div>
         {{-- Client End --}}
-        {{-- Youtube Start --}}
-        <div class='d-flex youtube-beranda align-items-center justify-content-center p-5 gap-5'>
-            <div>
-                <h1 class='subtitle fw-bold'>Temukan Kami di YouTube</h1>
+        {{-- Youtube Desktop Start --}}
+        {{-- Youtube Desktop End --}}
+        {{-- Youtube Mobile Start --}}
+        <div class='youtube-beranda p-5 row align-items-center'>
+            <div class='col pb-md-0 pb-4'>
+                <h1 class='subtitle subtitle fw-bold text-center'>Tonton Video Terbaru Kami Disini</h1>
             </div>
-            <div>
-                <iframe class='rounded' width="700" height="394" src="https://www.youtube.com/embed/a8wcWSvza1E?si=6apIrOFfY1a7_K46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class='col d-flex justify-content-center'>
+                <iframe class='rounded' width="560" height="315" src="https://www.youtube.com/embed/AsD9eUQh9qE?si=sCDJ5LuAA11tBMkC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
-        {{-- Youtube End --}}
     </section>
     @endsection

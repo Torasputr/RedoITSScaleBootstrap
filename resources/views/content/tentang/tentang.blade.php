@@ -9,19 +9,19 @@
     <section class='tentang-body'>
         <div class='px-5'>
             {{-- Milestone Start --}}
-            <div class='milestone grid-cols-2 py-5 align-items-center'>
-                <div>
+            <div class='milestone row py-5 align-items-center'>
+                <div class='col-md-6'>
                     <img class='milestone-image' src="{{ asset('images/tentang/tentangKami.png') }}" alt="">
                 </div>
-                <div>
-                    <h1 class='text-4xl subtitle fw-bold'>PT Internasional Teknik Solusindo</h1>
+                <div class='col-md-6'>
+                    <h1 class='fs-1 subtitle fw-bold pt-3 pt-md-0'>PT Internasional Teknik Solusindo</h1>
                     <h1 class='text-justify text-md fw-normal pt-3'>PT Internasional Teknik Solusindo atau dikenal dengan ITS Scale adalah perusahaan yang berspesialisasi di dalam pengadaan alat timbangan untuk komersial dan industri termasuk software & sistem integrasi untuk industri otomatis.</h1>
-                    <div class='d-flex align-items-center justify-content-around py-3 gap-4'>
-                        <button class='px-3 rounded-pill text-lg fw-semibold py-1 milestone-button' id='2014-button'>2014</button>
-                        <button class='px-3 rounded-pill text-lg fw-semibold py-1 milestone-button' id='2018-button'>2018</button>
-                        <button class='px-3 rounded-pill text-lg fw-semibold py-1 milestone-button' id='2020-button'>2020</button>
-                        <button class='px-3 rounded-pill text-lg fw-semibold py-1 milestone-button' id='2023-button'>2023</button>
-                        <button class='px-3 rounded-pill text-lg fw-semibold py-1 milestone-button' id='2024-button'>2024</button>
+                    <div class='d-flex align-items-center justify-content-around py-3 gap-1'>
+                        <button class='px-2 rounded-pill fs-6 fs-md-1 fw-semibold py-1 milestone-button' id='2014-button'>2014</button>
+                        <button class='px-2 rounded-pill fs-6 fs-md-1 fw-semibold py-1 milestone-button' id='2018-button'>2018</button>
+                        <button class='px-2 rounded-pill fs-6 fs-md-1 fw-semibold py-1 milestone-button' id='2020-button'>2020</button>
+                        <button class='px-2 rounded-pill fs-6 fs-md-1 fw-semibold py-1 milestone-button' id='2023-button'>2023</button>
+                        <button class='px-2 rounded-pill fs-6 fs-md-1 fw-semibold py-1 milestone-button' id='2024-button'>2024</button>
                     </div>
                     <div>
                         <h1 class='text-md text-justify fw-normal pt-1 milestone-text' id='2014-text'>ITS Scale dibentuk. Dimulai dari door-to-door sales, hingga mulai memberanikan diri untuk mencoba menawarkan produknya melalui business-to-business kepada beberapa perusahaan.</h1>
@@ -36,12 +36,18 @@
     </section>
     <section class='mx-5 py-5'>
         {{-- Visi Misi Start --}}
-        <div class='grid-cols-2 align-items-center'>
-            <div class='grid-cols-2 justify-content-around'>
-                <button class='py-2 rounded-pill text-3xl fw-bold visi-button'>Visi</button>
-                <button class='py-2 rounded-pill text-3xl fw-bold misi-button'>Misi</button>
+        <div class='row align-items-center'>
+            <div class='col-md-6 d-flex justify-content-center'>
+                <div class='row'>
+                    <div class='col'>
+                        <button class='py-2 px-4 px-md-5 rounded-pill text-3xl fw-bold visi-button'>Visi</button>
+                    </div>
+                    <div class='col'>
+                        <button class='py-2 px-4 px-md-5 rounded-pill text-3xl fw-bold misi-button'>Misi</button>
+                    </div>
+                </div>
             </div>
-            <div>
+            <div class='col-md-6 pt-4 pt-md-0'>
                 <div class='visi-text'>
                     <h1 class='visi-title text-4xl fw-bold'>Visi</h1>
                     <h1 class='pt-2 text-md fw-normal'>Menjadi perusahaan timbangan digital yang berbasis teknologi & sistem integrasi</h1>
@@ -55,45 +61,78 @@
         </div>
         {{-- Visi Misi End --}}
     </section>
-    <section class='tentang-body'>
-        <div class='grid-cols-2 mx-5 py-5 gap-5 align-items-center'>
-            <div>
-                <h1 class='fw-bold'>Kebijakan Mutu</h1>
+    <section class='tentang-body p-5'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h1 class='fw-bold text-3xl'>Kebijakan Mutu</h1>
                 <h1 class='py-2 text-justify text-md fw-normal'>Kami, PT. Internasional Teknik Solusindo yang bergerak dalam bidang Distribusi dan Service Timbangan Digital. Kami, manajemen dan seluruh karyawan PT Internasional Teknik Solusindo telah menyatakan komitmennya untuk menerapkan sistem manajemen mutu yang sesuai dengan persyaratan ISO 9001:2015, dengan cara :</h1>
-                <div class='d-flex align-items-center gap-4'>
+                <div class='d-flex align-items-center gap-4 gap-md-3'>
                     <h1 class='italic text-4xl fw-bold'>1.</h1>
-                    <h1 class='text-sm fw-bold'>Menyediakan kebutuhan timbangan digital dengan teknologi dan sistem yang terintegrasi</h1>
+                    <h1 class='text-sm fw-bold text-justify'>Menyediakan kebutuhan timbangan digital dengan teknologi dan sistem yang terintegrasi</h1>
                 </div>
-                <div class='d-flex align-items-center gap-4'>
+                <div class='d-flex align-items-center gap-4 gap-md-3'>
                     <h1 class='italic text-4xl fw-bold'>2.</h1>
-                    <h1 class='text-sm fw-bold'>Mendistribusikan timbangan digital dengan mengutamakan aspek kualitas dan kualitas</h1>
+                    <h1 class='text-sm fw-bold text-justify'>Mendistribusikan timbangan digital dengan mengutamakan aspek kualitas dan kualitas</h1>
                 </div>
-                <div class='d-flex align-items-center gap-4'>
+                <div class='d-flex align-items-center gap-4 gap-md-3'>
                     <h1 class='italic text-4xl fw-bold'>3.</h1>
-                    <h1 class='text-sm fw-bold'>Menjalin kerjasama dengan segala sektor industri & manufaktur sebagai penyuplai kebutuhan.</h1>
+                    <h1 class='text-sm fw-bold text-justify'>Menjalin kerjasama dengan segala sektor industri & manufaktur sebagai penyuplai kebutuhan.</h1>
                 </div>
-                <div class='d-flex align-items-center gap-4'>
+                <div class='d-flex align-items-center gap-4 gap-md-3'>
                     <h1 class='italic text-4xl fw-bold'>4.</h1>
-                    <h1 class='text-sm fw-bold'>Memperbaiki sistem manajemen mutu secara terus menerus khususnya pada mutu produk.</h1>
+                    <h1 class='text-sm fw-bold text-justify'>Memperbaiki sistem manajemen mutu secara terus menerus khususnya pada mutu produk.</h1>
                 </div>
             </div>
-            <div>
+            <div class='col-md-6 pt-3 pt-md-0'>
                 <img class='kebmut-img' src="{{ asset('images/tentang/KebijakanMutu.png') }}" alt="">
             </div>
         </div>
     </section>
     <section class='mx-5'>
-        <h1 class='text-3xl subtitle fw-bold text-center py-5'>SERTIFIKAT</h1>
-        <div class='grid-cols-3 pb-5'>
-            <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}')">
-                <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}" alt="">
-              </button>
-              <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/iso/isi.png') }}')">
-                <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/iso/thumbnail.png') }}" alt="">
-              </button>
-              <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/imi/imi.png') }}')">
-                <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/imi/imi.png') }}" alt="">
-              </button>
+        <div class='desktop'>
+            <h1 class='text-3xl subtitle fw-bold text-center pt-5 pb-4'>SERTIFIKAT</h1>
+            <div class='grid-cols-3 pb-5'>
+                <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}')">
+                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}" alt="">
+                  </button>
+                  <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/iso/isi.png') }}')">
+                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/iso/thumbnail.png') }}" alt="">
+                  </button>
+                  <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/imi/imi.png') }}')">
+                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/imi/imi.png') }}" alt="">
+                  </button>
+            </div>
+        </div>
+        <div class='mobile pb-5'>
+            <h1 class='text-center subtitle fw-bold pt-5 pb-5'>SERTIFIKAT</h1>
+            <div id="sertifCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}')">
+                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}" alt="">
+                        </button>
+                    </div>
+                    <div class="carousel-item">
+                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/iso/isi.png') }}')">
+                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/iso/thumbnail.png') }}" alt="">
+                        </button>
+                    </div>
+                    <div class="carousel-item">
+                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/imi/imi.png') }}')">
+                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/imi/imi.png') }}" alt="">
+                        </button>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#sertifCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#sertifCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </section>
 @endsection
+

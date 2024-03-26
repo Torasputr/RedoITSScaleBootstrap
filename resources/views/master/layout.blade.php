@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>@yield('title')</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         {{-- Styles CSS --}}
@@ -10,16 +10,16 @@
         {{-- Swiper CSS --}}
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     </head>
-    <body class='w-full'>
+    <body class='w-full overflow-x-hidden'>
         {{-- Navbar Start --}}
-        <header class="navbar navbar-expand-lg p-3 border-bottom  fixed-top">
+        <header class="navbar navbar-expand-lg p-3 border-bottom fixed-top">
             <div class="container-fluid">
                 {{-- Navbar Logo Start --}}
                 <div>
                     <a href="/">
                         <div class='d-flex align-items-center brand gap-3'>
                             <img class='logo' src="{{ asset('images/navbar/Logo ITS 2021.png') }}" alt="">
-                            <div class='text-center'>
+                            <div class='text-center desktop'>
                                 <h5 class="company-name" href="#">PT Internasional Teknik Solusindo</h5>
                                 <h6 class="motto" href="#">Weighing Integration & Solustion</h5>
                             </div>
@@ -226,6 +226,7 @@
             var swiper = new Swiper('.brands-section', {
             slidesPerView: 4,
             spaceBetween: 10,
+            centeredSlides: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -237,6 +238,23 @@
             }
         });
         </script>
+        <script>
+            var swiper = new Swiper('.brands-section-mobile', {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                loop: true,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }
+            });
+
+        </script>
         {{-- General Script JS --}}
         <script src='{{ asset('js/script.js') }}'></script>
         {{-- Modal Scripts --}}
@@ -247,6 +265,15 @@
             // Trigger modal on page load
             $(document).ready(function(){
                 $('#modalTriggerButton').click();
+            });
+        </script>
+        {{-- Carousel Script --}}
+        <script>
+            // Initialize the carousel when the document is ready
+            document.addEventListener('DOMContentLoaded', function() {
+                var carousel = new bootstrap.Carousel(document.getElementById('sertifCarousel'), {
+                    interval: false
+                });
             });
         </script>
     </body>

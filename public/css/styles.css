@@ -40,7 +40,7 @@
 .grid-cols-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 1rem;
 }
 .grid-cols-4 {
     display: grid;
@@ -95,8 +95,6 @@ header {
 .desktop {
     display: none;
 }
-
-
 footer {
     background-color: var(--primary);
     width: 100%;
@@ -256,15 +254,40 @@ footer {
 }
 .artikel-container {
     background-color: var(--gray-100);
+    transition-duration: 300ms;
 }
 .artikel-image-beeg {
     height: 30rem;
     width: 100%;
     object-fit: cover;
+    transition-duration: 300ms;
 }
 .artikel-image-smol {
     height: 12rem;
     width: 100%;
+    object-fit: cover;
+    transition-duration: 300ms;
+}
+.artikel-mobile {
+    background-color: var(--gray-100);
+    transition-duration: 300ms;
+}
+.artikel-mobile:hover h6 {
+    color: var(--primary);
+    transition-duration: 300ms;
+}
+.artikel-mobile a {
+    text-decoration: none;
+}
+.artikel-mobile h6 {
+    color: black;
+    transition-duration: 300ms;
+}
+
+
+.artikel-mobile img {
+    height: 4rem;
+    width: 4rem;
     object-fit: cover;
 }
 .artikel {
@@ -284,9 +307,26 @@ footer {
     color: var(--primary);
 }
 .artikel-image {
-    height: 12rem;
+    height: 4rem;
     width: 100%;
     object-fit: cover;
+}
+
+.truncate-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* .video {
+    max-width: auto;
+    max-height: auto;
+} */
+
+.brands-beranda {
+    max-height: 12rem;
+}
+.brand-mobile {
+    height: 8rem;
 }
 
 /* Produk */
@@ -318,6 +358,13 @@ footer {
     transition-duration: 300ms;
 }
 
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .client {
     width: 100%;
 }
@@ -339,14 +386,26 @@ footer {
     width: 100%;
     object-fit: scale-down;
 }
-/* .image-container {
-    width: 40%;
+.article-card {
+    background-color: var(--gray-100);
 }
 
-.article-image {
+.aspect-ratio-container {
+    position: relative;
     width: 100%;
-    object-fit: scale-down; */
-/* } */
+    padding-top: 75%; /* 4:3 aspect ratio (75% = 3/4) */
+    overflow: hidden;
+}
+
+.aspect-ratio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .paragraph {
     line-height: 1.5;
@@ -355,7 +414,7 @@ footer {
 /* Karir */
 .karir-banner {
     width: 100%;
-    height: 30rem;
+    max-height: 400px;
     object-fit: cover;
 }
 
@@ -516,7 +575,7 @@ footer {
 /* Tentang */
 .tentang-banner {
     width: 100%;
-    height: 100%;
+    max-height: 400px;
 }
 
 .tentang-body {
@@ -592,6 +651,11 @@ footer {
     transition-duration: 300ms;
 }
 
+.carousel-control-prev, .carousel-control-next {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
 .contact {
     gap: 2.2rem;
 }
@@ -608,7 +672,7 @@ footer {
     transition-duration: 300ms;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 768px) {
     .mobile {
         display: none;
     }
@@ -657,5 +721,10 @@ footer {
     }
     .newsletter .box {
         width: 100%;
+    }
+    .artikel-image {
+        height: 16rem;
+        width: 100%;
+        object-fit: cover;
     }
 }
