@@ -72,10 +72,5 @@ document.addEventListener("DOMContentLoaded", function() {
 function showPopup() {
     var popup = document.getElementById('popup');
     popup.style.display = 'block';
-    // You can add more code here to customize the popup behavior
-    // For example, you can use setTimeout to automatically close the popup after a certain time
-    // setTimeout(function() {
-    //     popup.style.display = 'none';
-    // }, 5000); // Close the popup after 5 seconds
-    return false; // Prevent the default behavior of the link
+    return false;
 }

@@ -269,11 +269,18 @@
         </script>
         {{-- Carousel Script --}}
         <script>
-            // Initialize the carousel when the document is ready
             document.addEventListener('DOMContentLoaded', function() {
                 var carousel = new bootstrap.Carousel(document.getElementById('sertifCarousel'), {
                     interval: false
                 });
+            });
+        </script>
+        <script>
+            var swiper = new Swiper('.swiper-container-article-mobile', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                },
             });
         </script>
     </body>

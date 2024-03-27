@@ -375,42 +375,37 @@ footer {
 /* Artikel */
 .artikel-banner {
     width: 100%;
-    height: 22rem;
+    height: 460px;
     background-image: url('/images/artikel/artikelBg.jpg');
 }
 
 .image-container {
     height: 360px;
 }
-.article-image {
-    width: 100%;
-    object-fit: scale-down;
-}
 .article-card {
     background-color: var(--gray-100);
 }
-
-.aspect-ratio-container {
-    position: relative;
+.article-card img {
+    height: 16rem;
     width: 100%;
-    padding-top: 75%; /* 4:3 aspect ratio (75% = 3/4) */
-    overflow: hidden;
-}
-
-.aspect-ratio-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
-
-
+.article-card h1 {
+    color: black;
+    transition-duration: 300ms;
+}
+.article-card:hover h1 {
+    color: var(--primary);
+    transition-duration: 300ms;
+}
+.article-image {
+    height: 22rem;
+    max-width: 100%;
+    object-fit: scale-down;
+}
 .paragraph {
     line-height: 1.5;
 }
-
 /* Karir */
 .karir-banner {
     width: 100%;
@@ -575,7 +570,7 @@ footer {
 /* Tentang */
 .tentang-banner {
     width: 100%;
-    max-height: 400px;
+    max-height: 500px;
 }
 
 .tentang-body {

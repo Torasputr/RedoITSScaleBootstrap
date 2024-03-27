@@ -81,7 +81,7 @@
             <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>ARTIKEL</h1>
             <div class='d-flex flex-column'>
                 <div>
-                    <a href="{{ $latestArticle->id }}">
+                    <a href="/artikel/{{ $latestArticle->id }}">
                         <div class='d-flex align-items-center gap-3 w-full artikel-mobile p-2'>
                             <div>
                                 <img src="{{ asset($latestArticle->thumbnail) }}" alt="">
@@ -95,7 +95,7 @@
                 </div>
                 @foreach($articles as $article)
                 <div class='pt-2'>
-                    <a href="{{ $article->id }}">
+                    <a href="/artikel/{{ $article->id }}">
                         <div class='d-flex align-items-center gap-3 w-full artikel-mobile p-2'>
                             <div>
                                 <img src="{{ asset($article->thumbnail) }}" alt="">
