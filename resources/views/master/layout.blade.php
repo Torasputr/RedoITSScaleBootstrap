@@ -65,7 +65,7 @@
                             {{-- Links End --}}
                         </ul>
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2 rounded-pill fst-italic" type="search" placeholder="Search" aria-label="Search">
+                            <input class="form-control me-2 rounded-pill fst-italic" type="search" placeholder="Teusuri Produk Disini..." aria-label="Search">
                         </form>
                     </div>
                 </div>

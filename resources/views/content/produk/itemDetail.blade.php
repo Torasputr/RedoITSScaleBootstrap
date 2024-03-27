@@ -2,11 +2,11 @@
 @section('title', 'ITS Scale - ' . $item->name)
 @section('content')
     <section class='mx-5'>
-        <div class='grid-cols-2 item-detail align-items-center py-5'>
-            <div>
+        <div class='row item-detail justify-content-center align-items-center py-5'>
+            <div class='col-md-5'>
                 <img class='item-image' src="{{ asset($item->image) }}" alt="">
             </div>
-            <div>
+            <div class='col-md-5'>
                 <div class='pb-3 border-bottom'>
                     <h1 class='text-3xl fw-bold subtitle'>{{ $item->name }}</h1>
                     <h1 class='text-lg fw-normal'>{{ $item->description }}</h1>

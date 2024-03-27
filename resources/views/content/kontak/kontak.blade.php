@@ -2,13 +2,19 @@
 @section('title', 'ITS Scale - Kontak')
 @section('content')
     <section class='mx-5'>
-        <div class='grid-cols-2 py-5 align-items-center'>
-            <div>
-                <iframe id="glc-map" class='glc-maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5274253554458!2d106.69913377366339!3d-6.193920893793714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbdea069aed3%3A0xffd9d326462995c2!2sPT%20Internasional%20Teknik%20Solusindo!5e0!3m2!1sid!2sid!4v1710836485995!5m2!1sid!2sid" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="cikarang-map" class='cikarang-maps d-none' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7574571592095!2d107.14480437366454!3d-6.2955715936935075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699bfdd40d2a8f%3A0xb8638e15f4f56f48!2sPT.%20INTERNASIONAL%20TEKNIK%20SOLUSINDO!5e0!3m2!1sid!2sid!4v1710839684270!5m2!1sid!2sid" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class='row py-5 align-items-center justify-content-center'>
+            <div class='col-md-5'>
+                <div class='desktop'>
+                    <iframe id="glc-map" class='glc-maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5274253554458!2d106.69913377366339!3d-6.193920893793714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbdea069aed3%3A0xffd9d326462995c2!2sPT%20Internasional%20Teknik%20Solusindo!5e0!3m2!1sid!2sid!4v1710836485995!5m2!1sid!2sid" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe id="cikarang-map" class='cikarang-maps d-none' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7574571592095!2d107.14480437366454!3d-6.2955715936935075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699bfdd40d2a8f%3A0xb8638e15f4f56f48!2sPT.%20INTERNASIONAL%20TEKNIK%20SOLUSINDO!5e0!3m2!1sid!2sid!4v1710839684270!5m2!1sid!2sid" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class='mobile'>
+                    <iframe id="glc-map" class='glc-maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5274253554458!2d106.69913377366339!3d-6.193920893793714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbdea069aed3%3A0xffd9d326462995c2!2sPT%20Internasional%20Teknik%20Solusindo!5e0!3m2!1sid!2sid!4v1710836485995!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe id="cikarang-map" class='cikarang-maps d-none' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7574571592095!2d107.14480437366454!3d-6.2955715936935075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699bfdd40d2a8f%3A0xb8638e15f4f56f48!2sPT.%20INTERNASIONAL%20TEKNIK%20SOLUSINDO!5e0!3m2!1sid!2sid!4v1710839684270!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-            <div>
-                <h1 class='subtitle text-2xl fw-bold'>Temukan Kami</h1>
+            <div class='col-md-5'>
+                <h1 class='subtitle text-2xl fw-bold pt-4'>Temukan Kami</h1>
                 <div class='pt-3'>
                     <button id="glc-button" class='location-button glc-button'>
                         <h1 class='text-lg subtitle pb-2 border-bottom'>Green Lake City</h1>

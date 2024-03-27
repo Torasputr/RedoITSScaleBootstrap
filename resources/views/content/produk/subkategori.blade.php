@@ -5,7 +5,7 @@
         <h1 class='text-center py-5 text-3xl fw-bold subtitle'>{{ $title }}</h1>
         <div class="row justify-content-center pb-5">
             @foreach($subcategories as $subcategory)
-            <div class="col-md-3 pb-3"> <!-- Each column occupies 3 out of 12 columns on medium-sized screens -->
+            <div class="col-md-3 pb-3">
                 <a href="/produk/{{ $alt }}/{{ $subcategory->alt }}">
                     <div class="category-card p-3 rounded">
                         <img class="category-image rounded" src="{{ asset($subcategory->image) }}" alt="">

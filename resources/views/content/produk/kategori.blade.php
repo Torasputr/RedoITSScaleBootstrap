@@ -3,16 +3,18 @@
 @section('content')
     <section class='mx-5'>
         <div>
-            <h1 class='text-center py-5 text-3xl fw-bold subtitle'>KATEGORI PRODUK</h1>
-            <div class='grid-cols-3 pb-5'>
+            <h1 class='text-center pt-5 pb-3 text-3xl fw-bold subtitle'>KATEGORI PRODUK</h1>
+            <div class='row'>
                 @foreach($categories as $category)
-                    <a href="/produk/{{ $category->alt }}">
-                        <div class='category-card p-3 rounded'>
-                            <img class='category-image rounded' src="{{ asset($category->image) }}" alt="">
-                            <h1 class='text-2xl pt-2 category-name fw-'>{{ $category->name }}</h1>
-                            <h1 class='category-name text-sm'>{{ $category->description }}</h1>
+                    <div class='col-md-4 col-6 py-2'>
+                        <div class='category-card p-md-3 p-2 rounded'>
+                            <a href="/produk/{{ $category->alt }}">
+                                <img class='category-image rounded' src="{{ asset($category->image) }}" alt="">
+                                <h1 class='text-xl pt-2 category-name text-truncate'>{{ $category->name }}</h1>
+                                <h1 class='subtitle-category text-dark text-sm text-truncate'>{{ $category->description }}</h1>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 @endforeach
             </div>
         </div>

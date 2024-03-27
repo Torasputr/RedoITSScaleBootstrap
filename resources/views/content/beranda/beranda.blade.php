@@ -151,15 +151,16 @@
         </div>
         {{-- Client End --}}
         {{-- Youtube Desktop Start --}}
-        {{-- Youtube Desktop End --}}
-        {{-- Youtube Mobile Start --}}
-        <div class='youtube-beranda p-5 row align-items-center'>
-            <div class='col pb-md-0 pb-4'>
-                <h1 class='subtitle subtitle fw-bold text-center'>Tonton Video Terbaru Kami Disini</h1>
-            </div>
-            <div class='col d-flex justify-content-center'>
-                <iframe class='rounded' width="560" height="315" src="https://www.youtube.com/embed/AsD9eUQh9qE?si=sCDJ5LuAA11tBMkC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class='youtube-beranda p-5'>
+            <div class='row align-items-center'>
+                <div class='col-md-6'>
+                    <h1 class='text-center subtitle fw-bold'>Tonton Video Terbaru Kami Disini</h1>
+                </div>
+                <div class='col-md-6 pt-5 pt-md-0 d-flex justify-content-center'>
+                    <iframe class='rounded' width="560" height="315" src="https://www.youtube.com/embed/AsD9eUQh9qE?si=sCDJ5LuAA11tBMkC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
+        {{-- Youtube Desktop End --}}
     </section>
-    @endsection
+@endsection

@@ -667,6 +667,15 @@ footer {
     transition-duration: 300ms;
 }
 
+.subtitle-category  {
+    color: black;
+    transition-duration: 300ms;
+}
+.category-card:hover .subtitle-category {
+    color: var(--primary);
+    transition-duration: 300ms;
+}
+
 @media (min-width: 768px) {
     .mobile {
         display: none;
@@ -721,5 +730,8 @@ footer {
         height: 16rem;
         width: 100%;
         object-fit: cover;
+    }
+    .category-name {
+        font-size: xx-large;
     }
 }

@@ -12,16 +12,16 @@
             <div class='pt-3 grid-cols-2 align-items-center'>
                 <div>
                     <h1 class='text-justify fw-light text-md'>{{ $article->paragraph1 }}</h1>
-                    <div class='d-flex justify-content-center mt-3'>
-                        <div class='overflow-hidden border p-2'> <!-- Add overflow-hidden class -->
+                    <div class='d-flex justify-content-center mt-3 border p-2'>
+                        <div class='overflow-hidden '> <!-- Add overflow-hidden class -->
                             <img class="article-image" src="{{ asset($article->image1) }}" alt="{{ $article->image1_alt }}">
                             <h1 class='text-sm fw-light pt-2'>Sumber: {{ $article->image1_source }}</h1>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class='d-flex justify-content-center mb-3'>
-                        <div class='border p-2'> <!-- Add overflow-hidden class -->
+                    <div class='d-flex justify-content-center mb-3 border p-2'>
+                        <div class=''> <!-- Add overflow-hidden class -->
                             <img class="article-image" src="{{ asset($article->image2) }}" alt="{{ $article->image2_alt }}">
                             <h1 class='text-sm fw-light pt-2'>Sumber: {{ $article->image2_source }}</h1>
                         </div>
@@ -33,16 +33,16 @@
         {{-- Desktop End --}}
         {{-- Mobile Start --}}
         <div class='mobile'>
-            <div class='py-4'>
-                <div class='d-flex justify-content-center pb-3'>
-                    <div class='overflow-hidden border p-2'> <!-- Add overflow-hidden class -->
+            <div class='py-'>
+                <div class='d-flex justify-content-center pb-3 border p-2'>
+                    <div class='overflow-hidden'> <!-- Add overflow-hidden class -->
                         <img class="article-image" src="{{ asset($article->image1) }}" alt="{{ $article->image1_alt }}">
                         <h1 class='text-sm fw-light pt-2'>Sumber: {{ $article->image1_source }}</h1>
                     </div>
                 </div>
                 <h1 class='text-md text-justify fw-light'>{{ $article->paragraph1 }}</h1>
-                <div class='d-flex justify-content-center my-3'>
-                    <div class='border p-2'> <!-- Add overflow-hidden class -->
+                <div class='d-flex justify-content-center my-3 border p-2'>
+                    <div class=''> <!-- Add overflow-hidden class -->
                         <img class="article-image" src="{{ asset($article->image2) }}" alt="{{ $article->image2_alt }}">
                         <h1 class='text-sm fw-light pt-2'>Sumber: {{ $article->image2_source }}</h1>
                     </div>
