@@ -13,13 +13,14 @@
         </div>
         {{-- Search Box End --}}
         {{-- Career Card Start --}}
-        <div class="row mx-5 gap-5 pb-5 justify-content-center align-items-stretch">
+        <div class="row mx-5 gap-3 pb-5 justify-content-center align-items-stretch">
             @foreach($positions as $position)
                 <div class="col-md-3">
                     <div class="career-card p-3 border rounded">
-                        <h1 class='text-truncate'>{{ $position->name }}</h1>
-                        <div class='pt-4 d-flex justify-content-end'>
-                            <a class='p-2 rounded-pill' href="">DAFTAR SEKARANG!</a>
+                        <h1 class='text-truncate text-3xl'>{{ $position->name }}</h1>
+                        <div class='pt-4 d-flex justify-content-center'>
+                            <!-- Add a data attribute to store the job ID -->
+                            <a class='py-1 px-4 rounded-pill fw-bold job-details-btn' href="/karir/{{ $position->alt }}">DAFTAR SEKARANG!</a>
                         </div>
                     </div>
                 </div>

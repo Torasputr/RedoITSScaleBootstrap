@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Position extends Model
 {
     use HasFactory;
+    public function responsibilites() {
+        return $this->belongsToMany(Responsibility::class);
+    }
+    public function requirements() {
+        return $this->belongsToMany(Requirement::class);
+    }
 }

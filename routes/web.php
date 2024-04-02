@@ -15,11 +15,7 @@ Route::get('/artikel', [PageController::class, 'artikel']);
 Route::get('/artikel/{id}', [PageController::class, 'artikelDetail']);
 // Karir Page
 Route::get('/karir', [PageController::class, 'karir']);
-Route::get('/karir/popup', function() {
-    return view('content.karir.popup');
-});
-Route::get('/karir/popup/form', [PageController::class, 'karirform']);
-Route::post('/karir/popup/form', [PageController::class, 'karirformsubmit']);
+Route::get('/karir/{alt}', [PageController::class, 'karirPopup']);
 // About Page
 Route::get('/tentang-kami', [PageController::class, 'tentang']);
 // Kontak Page

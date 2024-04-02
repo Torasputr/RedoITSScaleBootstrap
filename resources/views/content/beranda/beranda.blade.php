@@ -32,13 +32,15 @@
                 <div class='row pt-4'>
                     @foreach ($categories as $category)
                         <div class='col-md-4 category-card-container'>
-                            <div class='card rounded p-3'>
-                                <img class='card-category-image rounded' src="{{ asset($category->image) }}" alt="">
-                                <div class='card-text'>
-                                    <h3 class='pt-2 fs-3  fw-semibold text-truncate'>{{ $category->name }}</h3>
-                                    <h6 class='pt-1 fs-6 fw-normal text-truncate'>{{ $category->description }}</h6>
+                            <a href="/produk/{{ $category->alt }}">
+                                <div class='card rounded p-3'>
+                                    <img class='card-category-image rounded' src="{{ asset($category->image) }}" alt="">
+                                    <div class='card-text'>
+                                        <h3 class='pt-2 fs-3  fw-semibold text-truncate'>{{ $category->name }}</h3>
+                                        <h6 class='pt-1 fs-6 fw-normal text-truncate'>{{ $category->description }}</h6>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     @endforeach
                     <div class='d-flex justify-content-end '>

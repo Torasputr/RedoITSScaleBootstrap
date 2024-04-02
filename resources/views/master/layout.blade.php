@@ -285,8 +285,9 @@
         </script>
         <script>
             var swiper = new Swiper('.item-swiper', {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 10,
+                loop: true,
                 // Add navigation buttons
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -295,20 +296,19 @@
                 // Optional: Add breakpoints for responsive design
                 breakpoints: {
                     640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20
+                        slidesPerView: 1,
+                        spaceBetween: 0,
                     },
                     768: {
-                        slidesPerView: 3,
-                        spaceBetween: 30
+                        slidesPerView: 1,
+                        spaceBetween: 0
                     },
                     1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 40
+                        slidesPerView: 2,
+                        spaceBetween: 0,
                     }
                 }
             });
         </script>
-
     </body>
 </html>

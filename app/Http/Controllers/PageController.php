@@ -40,7 +40,9 @@ class PageController extends Controller
     }
     public function subcategory($alt) {
         $category = Category::where('alt', $alt)->firstOrFail();
-        $subcategories = $category->subcategory()->with('item')->distinct()->get();
+        $subcategories = $category->subcategory()->with(['item' => function ($query) use ($category) {
+            $query->where('category_id', '=', $category->id);
+        }])->distinct()->get();
         return view('content.produk.subcategory', compact('category', 'subcategories'));
     }
     public function item($c_alt, $s_alt, $b_alt, $i_alt) {
@@ -65,8 +67,9 @@ class PageController extends Controller
         $positions = Position::all();
         return view('content.karir.karir', compact('positions'));
     }
-    public function karirform() {
-        return view('content.karir.form');
+    public function karirPopup($alt) {
+        $position = Position::where('alt', $alt)->firstOrFail();
+        return view('content.karir.popup', compact('position'));
     }
 
     // Tentang Page
