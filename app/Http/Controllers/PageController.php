@@ -13,13 +13,17 @@ use App\Models\Artikel;
 use App\Models\Accspare;
 use App\Models\Category;
 use App\Models\Logindus;
+use App\Models\Position;
 use App\Models\Subretail;
+use App\Models\Subcategory;
 use App\Models\Sublogindus;
 use Illuminate\Http\Request;
 use App\Models\HomepageSlider;
+use App\Models\JobApplication;
 
 class PageController extends Controller
 {
+    // Beranda Page
     public function beranda() {
         $sliders = HomepageSlider::orderBy('id', 'desc')->take(3)->get();
         $categories = Category::latest()->take(3)->get();
@@ -28,115 +32,25 @@ class PageController extends Controller
         $brands = Brand::all();
         return view("content.beranda.beranda", compact('sliders', 'categories', 'articles', 'latestArticle', 'articles', 'brands'));
     }
+
+    // Produk Page
     public function kategori() {
         $categories = Category::all();
         return view('content.produk.kategori', compact('categories'));
     }
-    public function antiair() {
-        $items = Antiair::all();
-        $alt = 'antiair';
-        $title = 'Anti-Air';
-        return view('content.produk.items', compact('items', 'alt', 'title'));
+    public function subcategory($alt) {
+        $category = Category::where('alt', $alt)->firstOrFail();
+        $subcategories = $category->subcategory()->with('item')->distinct()->get();
+        return view('content.produk.subcategory', compact('category', 'subcategories'));
     }
-    public function atex() {
-        $items = Atex::all();
-        $alt = 'atex';
-        $title = 'Atex';
-        return view('content.produk.items', compact('items', 'alt', 'title'));
+    public function item($c_alt, $s_alt, $b_alt, $i_alt) {
+        $category = Category::where('alt', $c_alt)->firstOrFail();
+        $subcategory = Subcategory::where('alt', $s_alt)->firstOrFail();
+        $item = $subcategory->item()->where('alt', $i_alt)->firstOrFail();
+        return view('content.produk.item', compact('category', 'subcategory', 'item'));
     }
-    public function logindus() {
-        $subcategories = Sublogindus::all();
-        $alt = 'logistikindustri';
-        $title = 'Logistik & Industri';
-        return view('content.produk.subkategori', compact('subcategories', 'alt', 'title'));
-    }
-    public function antiairDetail($alt) {
-        $item = Antiair::where('alt', $alt)->firstOrFail();
-        $alt = 'antiair';
-        $title = 'Anti-Air';
-        return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
-    }
-    public function atexDetail($alt) {
-        $item = Atex::where('alt', $alt)->firstOrFail();
-        $alt = 'atex';
-        $title = 'Atex';
-        return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
-    }
-    public function logindusItem($s_alt) {
-        $subcategory = Sublogindus::where('alt', $s_alt)->firstOrFail();
-        $items = Logindus::where('sublogindus_id', $subcategory->id)->get();
-        $alt = 'logistikindustri';
-        $sub_alt = $s_alt;
-        $title = $subcategory->name;
-        return view('content.produk.subkategoriItems', compact('items', 'alt', 'title', 'sub_alt'));
-    }
-    public function logindusItemDetails($s_alt, $i_alt) {
-        $subcategory = Sublogindus::where('alt', $s_alt)->firstOrFail();
-        $item = Logindus::where('alt', $i_alt)->firstOrFail();
-        $alt = 'logistikindustri';
-        $title = 'Bench Scale';
-        return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
-    }
-    public function labmed() {
-        $title = 'Laboratorium & Medical';
-        $alt = 'laboratoriummedical';
-        $brands = Brand::whereIn('id', Labmed::distinct()->pluck('brand_id'))->get();
-        return view('content.produk.brand', compact('title', 'alt', 'brands'));
-    }
-    public function labmedItems($b_alt) {
-        $title = $b_alt;
-        $alt = 'laboratoriummedical';
-        $sub_alt = $b_alt;
-        $brand = Brand::where('alt', $b_alt)->firstOrFail();
-        $items = Labmed::where('brand_id', $brand->id)->get();
-        return view('content.produk.subkategoriItems', compact('title', 'alt', 'sub_alt', 'brand', 'items'));
-    }
-    public function labmedItemDetails($s_alt, $i_alt) {
-        $item = Labmed::where('alt', $i_alt)->firstOrFail();
-        $alt = 'laboratoriummedical';
-        $title = 'Bench Scale';
-        return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
-    }
-    public function retail() {
-        $subcategories = Subretail::all();
-        $alt = 'retail';
-        $title = 'Retail';
-        return view('content.produk.subkategori', compact('subcategories', 'alt', 'title'));
-    }
-    public function retailItem($s_alt) {
-        $subcategory = Subretail::where('alt', $s_alt)->firstOrFail();
-        $items = Retail::where('subretail_id', $subcategory->id)->get();
-        $alt = 'retail';
-        $sub_alt = $s_alt;
-        $title = 'Bench Scale';
-        return view('content.produk.subkategoriItems', compact('items', 'alt', 'title', 'sub_alt'));
-    }
-    public function retailItemDetails($s_alt, $i_alt) {
-        $subcategory = Subretail::where('alt', $s_alt)->firstOrFail();
-        $item = Retail::where('alt', $i_alt)->firstOrFail();
-        $alt = 'retail';
-        $title = 'Retail';
-        return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
-    }    public function accspare() {
-        $title = 'Accessories & Sparepart';
-        $alt = 'accessoriessparepart';
-        $brands = Brand::whereIn('id', Accspare::distinct()->pluck('brand_id'))->get();
-        return view('content.produk.brand', compact('title', 'alt', 'brands'));
-    }
-    public function accspareItems($b_alt) {
-        $title = $b_alt;
-        $alt = 'accessoriessparepart';
-        $sub_alt = $b_alt;
-        $brand = Brand::where('alt', $b_alt)->firstOrFail();
-        $items = Accspare::where('brand_id', $brand->id)->get();
-        return view('content.produk.subkategoriItems', compact('title', 'alt', 'sub_alt', 'brand', 'items'));
-    }
-    public function accspareItemDetails($s_alt, $i_alt) {
-        $item = Accspare::where('alt', $i_alt)->firstOrFail();
-        $alt = 'accesoriessparepart';
-        $title = 'Bench Scale';
-        return view('content.produk.itemDetail', compact('item', 'alt', 'title'));
-    }
+
+    // Artikel Page
     public function artikel() {
         $articles = Article::orderBy('date', 'desc')->simplePaginate(9);
         return view('content.artikel.artikel', compact('articles'));
@@ -145,14 +59,24 @@ class PageController extends Controller
         $article = Article::findOrFail($id);
         return view('content.artikel.artikelDetail', compact('article'));
     }
+
+    // Karir Page
     public function karir() {
-        $careers = Career::all();
-        return view('content.karir.karir', compact('careers'));
+        $positions = Position::all();
+        return view('content.karir.karir', compact('positions'));
     }
+    public function karirform() {
+        return view('content.karir.form');
+    }
+
+    // Tentang Page
     public function tentang() {
         return view('content.tentang.tentang');
     }
+
+    // Kontak Page
     public function kontak() {
         return view('content.kontak.kontak');
     }
+
 }

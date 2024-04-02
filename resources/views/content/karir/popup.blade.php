@@ -104,7 +104,7 @@
                 <div>
                     <div class='d-flex justify-content-center py-2 gap-5'>
                         <a class='popup-tutup text-xl fw-bold p-2 rounded-pill px-4' href="/karir">Tutup</a>
-                        <a class='popup-daftar text-xl fw-bold p-2 rounded-pill px-4' href="">Daftar Sekarang</a>
+                        <a class='popup-daftar text-xl fw-bold p-2 rounded-pill px-4' href="/karir/popup/form">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>

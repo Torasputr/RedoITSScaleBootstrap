@@ -25,7 +25,7 @@
             <div class='col-10 py-2 mobile'>
                 <a href="/artikel/{{ $article->id }}">
                   <div class='article-card container p-3 rounded'>
-                        <img class='img-fluid' src="{{ asset($article->thumbnail) }}" alt="">
+                        <img class='rounded' src="{{ asset($article->thumbnail) }}" alt="">
                         <h1 class='text-2xl pt-3 text-truncate'>{{ $article->title }}</h1>
                         <h1 class='text-sm text-truncate fw-light'>{{ $article->author->name }}</h1>
                         <div class='pt-1'>

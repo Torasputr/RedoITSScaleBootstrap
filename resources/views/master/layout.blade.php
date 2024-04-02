@@ -18,7 +18,7 @@
                 <div>
                     <a href="/">
                         <div class='d-flex align-items-center brand gap-3'>
-                            <img class='logo' src="{{ asset('images/navbar/Logo ITS 2021.png') }}" alt="">
+                            <img class='logo' src="{{ asset('images/navbar/Logo ITS 2021.webp') }}" alt="">
                             <div class='text-center desktop'>
                                 <h5 class="company-name" href="#">PT Internasional Teknik Solusindo</h5>
                                 <h6 class="motto" href="#">Weighing Integration & Solustion</h5>
@@ -65,7 +65,7 @@
                             {{-- Links End --}}
                         </ul>
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2 rounded-pill fst-italic" type="search" placeholder="Teusuri Produk Disini..." aria-label="Search">
+                            <input class="form-control px-3 text-md me-2 rounded-pill fst-italic" style='width: 15rem;' type="search" placeholder="Telusuri Produk Disini..." aria-label="Search">
                         </form>
                     </div>
                 </div>
@@ -283,5 +283,32 @@
                 },
             });
         </script>
+        <script>
+            var swiper = new Swiper('.item-swiper', {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                // Add navigation buttons
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                // Optional: Add breakpoints for responsive design
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40
+                    }
+                }
+            });
+        </script>
+
     </body>
 </html>

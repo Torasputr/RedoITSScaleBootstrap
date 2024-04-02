@@ -216,26 +216,9 @@ footer {
 .subtitle {
     color: var(--primary);
 }
-.category-card {
-    background-color: var(--gray-100);
-    transition-duration: 300ms;
-}
-.category-card:hover {
-    box-shadow: black;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    transition-duration: 300ms;
-}
-.category-image {
-    max-height: 20rem;
+.card-category-image {
     width: 100%;
-}
-.category-name {
-    color: black;
-    text-decoration: none;
-}
-.category-card:hover .category-name{
-    transition-duration: 300ms;
-    color: var(--primary);
+    object-fit: cover;
 }
 
 @media (max-width: 991px) {
@@ -330,6 +313,29 @@ footer {
 }
 
 /* Produk */
+.card {
+    border: none;
+    background-color: var(--gray-100);
+    transition-duration: 300ms;
+}
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    transition-duration: 300ms;
+}
+.card-image {
+    background-color: white;
+    height: 16rem;
+    width: 100%;
+    object-fit: contain;
+}
+.card-text {
+    color: black;
+}
+.card:hover .card-text {
+    color: var(--primary);
+    transition-duration: 300ms;
+}
+
 .brochure {
     color: white;
     background-color: var(--primary);
@@ -341,8 +347,15 @@ footer {
     transition-duration: 300ms;
 }
 .item-image {
+    height: 40rem;
     width: 100%;
+    object-fit: contain;
 }
+
+.item-brand {
+    height: 6.5rem;
+}
+
 .item-detail {
     gap: 4rem;
 }
@@ -363,6 +376,10 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.item-card-brand {
+    height: 50px;
 }
 
 .client {
@@ -444,30 +461,26 @@ footer {
 }
 
 .career-card {
-    position: relative;
+    background-image: url('../images/karir/card.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     width: 100%;
     height: auto;
-}
-.career-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill; /* Ensure the image covers the container */
-    z-index: -1; /* Place the image behind other content */
+    transition-duration: 300ms;
 }
 
 .career-card a {
     border: solid 1px var(--primary);
     background-color: var(--primary);
     color: white;
+    transition-duration: 300ms;
 }
 
 .career-card:hover {
     transition-duration: 300ms;
     color: var(--primary);
     scale: 110%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
 }
 
 .career-card a:hover {
@@ -676,6 +689,31 @@ footer {
     transition-duration: 300ms;
 }
 
+/* Form */
+.banner-form {
+    background-image: url('../images/karir/form-banner.png');
+    width: 100%;
+    background-size: cover;
+}
+
+.position-name {
+    color: var(--secondary);
+}
+.form-input {
+    width: 100%;
+}
+.submit-form-btn {
+    background-color: var(--primary);
+    color: white;
+    border: 2px solid var(--primary);
+    transition-duration: 300ms;
+}
+.submit-form-btn:hover {
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    transition-duration: 300ms;
+}
 @media (min-width: 768px) {
     .mobile {
         display: none;

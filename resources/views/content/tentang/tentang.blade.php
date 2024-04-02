@@ -3,7 +3,7 @@
 @section('content')
     <section>
         {{-- Banner Start --}}
-        <img class='tentang-banner' src="{{ asset('images/tentang/banner.png') }}" alt="">
+        <img class='tentang-banner' src="{{ asset('images/tentang/banner.webp') }}" alt="">
         {{-- Banner End --}}
     </section>
     <section class='tentang-body'>
@@ -11,7 +11,7 @@
             {{-- Milestone Start --}}
             <div class='milestone row py-5 align-items-center'>
                 <div class='col-md-6'>
-                    <img class='milestone-image' src="{{ asset('images/tentang/tentangKami.png') }}" alt="">
+                    <img class='milestone-image' src="{{ asset('images/tentang/tentangKami.webp') }}" alt="">
                 </div>
                 <div class='col-md-6'>
                     <h1 class='fs-1 subtitle fw-bold pt-3 pt-md-0'>PT Internasional Teknik Solusindo</h1>
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class='col-md-6 pt-3 pt-md-0'>
-                <img class='kebmut-img' src="{{ asset('images/tentang/KebijakanMutu.png') }}" alt="">
+                <img class='kebmut-img' src="{{ asset('images/tentang/KebijakanMutu.webp') }}" alt="">
             </div>
         </div>
     </section>
@@ -92,14 +92,14 @@
         <div class='desktop'>
             <h1 class='text-3xl subtitle fw-bold text-center pt-5 pb-4'>SERTIFIKAT</h1>
             <div class='grid-cols-3 pb-5'>
-                <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}')">
-                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}" alt="">
+                <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.webp') }}')">
+                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.webp') }}" alt="">
                   </button>
-                  <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/iso/isi.png') }}')">
-                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/iso/thumbnail.png') }}" alt="">
+                  <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/iso/isi.webp') }}')">
+                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/iso/thumbnail.webp') }}" alt="">
                   </button>
-                  <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/imi/imi.png') }}')">
-                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/imi/imi.png') }}" alt="">
+                  <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/imi/imi.webp') }}')">
+                    <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/imi/imi.webp') }}" alt="">
                   </button>
             </div>
         </div>
@@ -108,18 +108,18 @@
             <div id="sertifCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}')">
-                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.png') }}" alt="">
+                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.webp') }}')">
+                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.webp') }}" alt="">
                         </button>
                     </div>
                     <div class="carousel-item">
-                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/iso/isi.png') }}')">
-                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/iso/thumbnail.png') }}" alt="">
+                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/iso/isi.webp') }}')">
+                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/iso/thumbnail.webp') }}" alt="">
                         </button>
                     </div>
                     <div class="carousel-item">
-                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/imi/imi.png') }}')">
-                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/imi/imi.png') }}" alt="">
+                        <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/imi/imi.webp') }}')">
+                            <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/imi/imi.webp') }}" alt="">
                         </button>
                     </div>
                 </div>
