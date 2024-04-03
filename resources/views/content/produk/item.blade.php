@@ -9,7 +9,7 @@
             <div class='col-md-5'>
                 <div class='d-flex align-items-center justify-content-between border-bottom gap-2'>
                     <h1 class='subtitle'>{{ $item->name }}</h1>
-                    <img class='item-brand pb-2' src="{{ asset($item->brand->image) }}" alt="">
+                    <img class='item-brand-detail pb-2' src="{{ asset($item->brand->image) }}" alt="">
                 </div>
                 <ul class='pt-4 px-5'>
                     @foreach($item->features as $feature)

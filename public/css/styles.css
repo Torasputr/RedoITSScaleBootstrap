@@ -355,6 +355,9 @@ footer {
 .item-brand {
     height: 2rem;
 }
+.item-brand-detail {
+    height: 4rem;
+}
 
 .item-detail {
     gap: 4rem;
@@ -387,6 +390,11 @@ footer {
 }
 .youtube-beranda {
     background-color: var(--gray-100);
+}
+.video-player {
+    width: 100%;
+    aspect-ratio: 16, 9;
+    height: auto;
 }
 
 /* Artikel */

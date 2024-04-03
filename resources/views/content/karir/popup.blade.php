@@ -29,6 +29,16 @@
                     @endforeach
                 </ul>
             </div>
+            @if($position->specialrequirements->count() != 0)
+                <div class='pb-4'>
+                    <h2 class='fw-bold'>Kualifikasi {{ $position->name }}</h2>
+                    <ul>
+                        @foreach ($position->specialrequirements as $specialrequirement)
+                            <li class='text-xl'>{{ $specialrequirement->specialrequirements }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class=''>
                 <h2 class='fw-bold'>Kualifikasi</h2>
                 <ul>

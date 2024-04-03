@@ -14,4 +14,7 @@ class Position extends Model
     public function requirements() {
         return $this->belongsToMany(Requirement::class);
     }
+    public function specialrequirements() {
+        return $this->belongsToMany(Specialrequirement::class);
+    }
 }
