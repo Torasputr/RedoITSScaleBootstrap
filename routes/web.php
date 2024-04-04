@@ -20,3 +20,5 @@ Route::get('/karir/{alt}', [PageController::class, 'karirPopup']);
 Route::get('/tentang-kami', [PageController::class, 'tentang']);
 // Kontak Page
 Route::get('/kontak', [PageController::class, 'kontak']);
+// Footer
+Route::post('/newuser', [PageController::class, 'newuser']);

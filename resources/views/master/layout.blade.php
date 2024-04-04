@@ -80,6 +80,7 @@
                 </div>
             </div>
         </header>
+
         <div class='content'>
             @yield('content')
         </div>
@@ -179,13 +180,14 @@
                                 <div>
                                     <h4 class='title text-center fw-bold'>BERLANGGANAN KE NEWSLETTER KAMI</h4>
                                     {{-- Search Start --}}
-                                    <div class='d-flex align-items-center justify-content-center gap-2 search py-5'>
-                                        <form action="" method='POST'>
-                                            @csrf
-                                            <input class='fst-italic box text-sm' type="email" placeholder='email@example.com'>
+                                    <form action="/newuser" method='POST'>
+                                        @csrf
+                                        <div class='d-flex align-items-center justify-content-center gap-2 search py-5'>
+                                            <input class='fst-italic box text-sm' name='email' type="email" placeholder='email@example.com'>
+                                            @error('email') <span class='text-danger'>{{ $message }}</span> @enderror
                                             <button class='fw-bold button text-sm'>REGISTER</button>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                     {{-- Search End --}}
                                     <div class='d-flex align-items-center justify-content-between'>
                                         <a href="https://www.facebook.com/internasionalteknik.solusindo">

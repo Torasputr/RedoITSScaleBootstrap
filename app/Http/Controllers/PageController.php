@@ -20,6 +20,7 @@ use App\Models\Sublogindus;
 use Illuminate\Http\Request;
 use App\Models\HomepageSlider;
 use App\Models\JobApplication;
+use App\Models\Newuser;
 
 class PageController extends Controller
 {
@@ -81,5 +82,13 @@ class PageController extends Controller
     public function kontak() {
         return view('content.kontak.kontak');
     }
-
+    public function newuser(Request $request) {
+        $request->validate([
+            'email' => 'required',
+        ]);
+        Newuser::create([
+            'email' => $request->email,
+        ]);
+        return redirect('/')->with('status', 'Thankyou Very Much');
+    }
 }
