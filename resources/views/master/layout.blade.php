@@ -9,6 +9,15 @@
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         {{-- Swiper CSS --}}
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9QNF58KZK"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Z9QNF58KZK');
+        </script>
     </head>
     <body class='w-full overflow-x-hidden'>
         {{-- Navbar Start --}}
@@ -171,8 +180,11 @@
                                     <h4 class='title text-center fw-bold'>BERLANGGANAN KE NEWSLETTER KAMI</h4>
                                     {{-- Search Start --}}
                                     <div class='d-flex align-items-center justify-content-center gap-2 search py-5'>
-                                        <input class='fst-italic box text-sm' type="email" placeholder='email@example.com'>
-                                        <button class='fw-bold button text-sm'>REGISTER</button>
+                                        <form action="" method='POST'>
+                                            @csrf
+                                            <input class='fst-italic box text-sm' type="email" placeholder='email@example.com'>
+                                            <button class='fw-bold button text-sm'>REGISTER</button>
+                                        </form>
                                     </div>
                                     {{-- Search End --}}
                                     <div class='d-flex align-items-center justify-content-between'>
