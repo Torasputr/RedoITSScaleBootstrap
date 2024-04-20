@@ -16,6 +16,8 @@ Route::get('/artikel/{id}', [PageController::class, 'artikelDetail']);
 // Karir Page
 Route::get('/karir', [PageController::class, 'karir']);
 Route::get('/karir/{alt}', [PageController::class, 'karirPopup']);
+Route::get('karir/{alt}/register', [PageController::class, 'register']);
+Route::post('karir/{alt}/register/submit', [PageController::class, 'submit']);
 // About Page
 Route::get('/tentang-kami', [PageController::class, 'tentang']);
 // Kontak Page

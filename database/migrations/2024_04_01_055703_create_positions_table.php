@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('jobdesc');
             $table->string('alt');
+            $table->string('image');
         });
     }
 

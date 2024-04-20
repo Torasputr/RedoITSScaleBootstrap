@@ -17,10 +17,10 @@
             @foreach($positions as $position)
                 <div class="col-md-3">
                     <div class="career-card p-3 border rounded">
-                        <h1 class='text-truncate text-3xl'>{{ $position->name }}</h1>
+                        <h1 class='text-truncate text-lg'>{{ $position->name }}</h1>
                         <div class='pt-4 d-flex justify-content-center'>
                             <!-- Add a data attribute to store the job ID -->
-                            <a class='py-1 px-4 rounded-pill fw-bold job-details-btn' href="/karir/{{ $position->alt }}">DAFTAR SEKARANG!</a>
+                            <a class='py-1 px-4 rounded-pill fw-bold job-details-btn text-sm' href="/karir/{{ $position->alt }}">DAFTAR SEKARANG!</a>
                         </div>
                     </div>
                 </div>

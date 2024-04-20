@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>@yield('title')</title>
+        <link rel="shortcut icon" type='icon' href="{{ asset('images/navbar/Logo ITS 2021.webp') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         {{-- Styles CSS --}}
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
@@ -30,7 +31,7 @@
                             <img class='logo' src="{{ asset('images/navbar/Logo ITS 2021.webp') }}" alt="">
                             <div class='text-center desktop'>
                                 <h5 class="company-name" href="#">PT Internasional Teknik Solusindo</h5>
-                                <h6 class="motto" href="#">Weighing Integration & Solustion</h5>
+                                <h6 class="motto" href="#">Weighing Integration & Solution</h5>
                             </div>
                         </div>
                     </a>
@@ -84,6 +85,15 @@
         <div class='content'>
             @yield('content')
         </div>
+        {{-- Whatsapp Icon Start --}}
+        <div class='container'>
+            <div class="whatsapp-icon position-fixed bottom-0 end-0 mb-4 me-4 rounded-circle p-2">
+                <a href="https://api.whatsapp.com/send/?phone=6281119103783&text=Halo%2C+saya+membutuhkan+timbangan+digital">
+                    <i class="fa-brands fa-whatsapp fs-1 wa-icon"></i>
+                </a>
+            </div>
+        </div>
+        {{-- Whatsapp Icon End --}}
         {{-- Footer Mobile Start --}}
         <footer class='p-3 mobile'>
             <div class="container-fluid">

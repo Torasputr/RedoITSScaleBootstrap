@@ -10,9 +10,11 @@ use App\Models\Retail;
 use App\Models\Antiair;
 use App\Models\Article;
 use App\Models\Artikel;
+use App\Models\Newuser;
 use App\Models\Accspare;
 use App\Models\Category;
 use App\Models\Logindus;
+use App\Models\Newkarir;
 use App\Models\Position;
 use App\Models\Subretail;
 use App\Models\Subcategory;
@@ -20,7 +22,6 @@ use App\Models\Sublogindus;
 use Illuminate\Http\Request;
 use App\Models\HomepageSlider;
 use App\Models\JobApplication;
-use App\Models\Newuser;
 
 class PageController extends Controller
 {
@@ -71,6 +72,36 @@ class PageController extends Controller
     public function karirPopup($alt) {
         $position = Position::where('alt', $alt)->firstOrFail();
         return view('content.karir.popup', compact('position'));
+    }
+    public function register($alt) {
+        $position = Position::where('alt', $alt)->firstOrFail();
+        return view('content.karir.form', compact('position'));
+    }
+    public function submit($alt, Request $request) {
+        $position = Position::where('alt', $alt)->firstOrFail();
+        $request->validate([
+            'name' => 'required',
+            'cv' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'address' => 'required',
+            'currentcompany' => 'nullable',
+            'linkedin' => 'nullable',
+            'portfolio' => 'nullable',
+        ]);
+
+        Newkarir::create([
+            'position_id' => $position->id,
+            'cv' => $request->cv,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'currentcompany' => $request->currentcompany,
+            'linkedin' => $request->linkedin,
+            'portfolio' => $request->portfolio,
+        ]);
+        return redirect('/karir')->with('status', 'Sukses');
     }
 
     // Tentang Page

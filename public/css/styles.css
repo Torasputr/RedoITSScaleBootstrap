@@ -385,6 +385,23 @@ footer {
     height: 50px;
 }
 
+.whatsapp-icon {
+    background-color: #25D366;
+    transition-duration: 300ms;
+    z-index: 99999;
+
+}
+
+.wa-icon {
+    color: white;
+    transition-duration: 300ms;
+}
+
+.whatsapp-icon:hover {
+    transition-duration: 300ms;
+    scale: 110%;
+}
+
 .client {
     width: 100%;
 }
@@ -403,6 +420,7 @@ footer {
     height: 460px;
     background-image: url('/images/artikel/artikelBg.jpg');
 }
+
 
 .image-container {
     height: 360px;
@@ -499,7 +517,18 @@ footer {
 }
 .karir-footer {
     background-color: #F2ECEC;
-    max-width: 100%;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 999;
+}
+
+.karirform-footer {
+    background-color: #F2ECEC;
+}
+
+.popup-body {
+    margin-bottom: 180px;
 }
 
 .secondary {
@@ -690,10 +719,12 @@ footer {
 
 /* Form */
 .banner-form {
-    background-image: url('../images/karir/form-banner.png');
+    background-image: url('../images/karir/popup/formBanner.webp');
     width: 100%;
     background-size: cover;
 }
+
+
 
 .position-name {
     color: var(--secondary);

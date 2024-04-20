@@ -2,12 +2,12 @@
 @section('title', 'ITS Scale - Beranda')
 @section('content')
     {{-- Popup Start --}}
-    <div class="popup-overlay" id="popupOverlay">
+    {{-- <div class="popup-overlay" id="popupOverlay">
         <div class="popup-content">
             <span class="close-button rounded-circle px-2 fw-semibold" onclick="closePopup()">X</span>
             <img class='img-fluid' style='width: 200%' src="{{ asset('images/Beranda/popup.webp') }}" alt="Popup Image" width="1000" height="300">
         </div>
-    </div>
+    </div> --}}
     {{-- Popup End --}}
     {{-- Slider Start --}}
     <section class=''>
@@ -163,7 +163,7 @@
                     <h1 class='text-center subtitle fw-bold'>Tonton Video Terbaru Kami Disini</h1>
                 </div>
                 <div class='col-md-6 pt-5 pt-md-0 d-flex justify-content-center embed-responsive embed-responsive-16by9'>
-                    <iframe class='rounded embed-responsive-item' src="https://www.youtube.com/embed/9yNyKBgZL_8?si=HWm59wqMxyfjA1Yt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class='rounded' width="560" height="315" src="https://www.youtube.com/embed/2qGrHrh7b2w?si=GFsL0o4MBsy4hqOd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

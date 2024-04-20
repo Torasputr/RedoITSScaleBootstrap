@@ -62,7 +62,7 @@
         {{-- Visi Misi End --}}
     </section>
     <section class='tentang-body p-5'>
-        <div class='row'>
+        <div class='row align-items-center'>
             <div class='col-md-6'>
                 <h1 class='fw-bold text-3xl'>Kebijakan Mutu</h1>
                 <h1 class='py-2 text-justify text-md fw-normal'>Kami, PT. Internasional Teknik Solusindo yang bergerak dalam bidang Distribusi dan Service Timbangan Digital. Kami, manajemen dan seluruh karyawan PT Internasional Teknik Solusindo telah menyatakan komitmennya untuk menerapkan sistem manajemen mutu yang sesuai dengan persyaratan ISO 9001:2015, dengan cara :</h1>
