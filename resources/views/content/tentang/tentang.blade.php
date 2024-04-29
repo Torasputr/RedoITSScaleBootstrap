@@ -9,9 +9,9 @@
     <section class='tentang-body'>
         <div class='px-5'>
             {{-- Milestone Start --}}
-            <div class='milestone row py-5 align-items-center'>
-                <div class='col-md-6'>
-                    <img class='milestone-image' src="{{ asset('images/tentang/tentangKami.webp') }}" alt="">
+            <div class='milestone row py-5 align-items-center gap-4 d-flex justify-content-center'>
+                <div class='col-md-5'>
+                    <img class='milestone-image' src="{{ asset('images/tentang/KebijakanMutu.webp') }}" alt="">
                 </div>
                 <div class='col-md-6'>
                     <h1 class='fs-1 subtitle fw-bold pt-3 pt-md-0'>PT Internasional Teknik Solusindo</h1>
@@ -62,7 +62,7 @@
         {{-- Visi Misi End --}}
     </section>
     <section class='tentang-body p-5'>
-        <div class='row align-items-center'>
+        <div class='row align-items-center justify-content-center'>
             <div class='col-md-6'>
                 <h1 class='fw-bold text-3xl'>Kebijakan Mutu</h1>
                 <h1 class='py-2 text-justify text-md fw-normal'>Kami, PT. Internasional Teknik Solusindo yang bergerak dalam bidang Distribusi dan Service Timbangan Digital. Kami, manajemen dan seluruh karyawan PT Internasional Teknik Solusindo telah menyatakan komitmennya untuk menerapkan sistem manajemen mutu yang sesuai dengan persyaratan ISO 9001:2015, dengan cara :</h1>
@@ -83,8 +83,8 @@
                     <h1 class='text-sm fw-bold text-justify'>Memperbaiki sistem manajemen mutu secara terus menerus khususnya pada mutu produk.</h1>
                 </div>
             </div>
-            <div class='col-md-6 pt-3 pt-md-0'>
-                <img class='kebmut-img' src="{{ asset('images/tentang/KebijakanMutu.webp') }}" alt="">
+            <div class='col-md-5 pt-3 pt-md-0'>
+                <img class='kebmut-img' src="{{ asset('images/tentang/tentangKami.jpg') }}" alt="">
             </div>
         </div>
     </section>

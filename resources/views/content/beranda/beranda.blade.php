@@ -163,7 +163,7 @@
                     <h1 class='text-center subtitle fw-bold'>Tonton Video Terbaru Kami Disini</h1>
                 </div>
                 <div class='col-md-6 pt-5 pt-md-0 d-flex justify-content-center embed-responsive embed-responsive-16by9'>
-                    <iframe class='rounded' width="560" height="315" src="https://www.youtube.com/embed/2qGrHrh7b2w?si=GFsL0o4MBsy4hqOd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class='rounded' width="560" height="315" src="https://www.youtube.com/embed/bes6qxPQsHo?si=6kYmbK8RLQ1bZiN6 " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
