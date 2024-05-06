@@ -3,7 +3,9 @@
 @section('content')
     <section>
         {{-- Banner Start --}}
-        <img class='tentang-banner' src="{{ asset('images/tentang/banner.webp') }}" alt="">
+        <div class='tentang-banner p-5 d-flex align-items-center'>
+            <h1 class='fw-bold text'>Tentang Kami</h1>
+        </div>
         {{-- Banner End --}}
     </section>
     <section class='tentang-body'>
@@ -64,7 +66,7 @@
     <section class='tentang-body p-5'>
         <div class='row align-items-center justify-content-center'>
             <div class='col-md-6'>
-                <h1 class='fw-bold text-3xl'>Kebijakan Mutu</h1>
+                <h1 class='fw-bold text-3xl subtitle'>Kebijakan Mutu</h1>
                 <h1 class='py-2 text-justify text-md fw-normal'>Kami, PT. Internasional Teknik Solusindo yang bergerak dalam bidang Distribusi dan Service Timbangan Digital. Kami, manajemen dan seluruh karyawan PT Internasional Teknik Solusindo telah menyatakan komitmennya untuk menerapkan sistem manajemen mutu yang sesuai dengan persyaratan ISO 9001:2015, dengan cara :</h1>
                 <div class='d-flex align-items-center gap-4 gap-md-3'>
                     <h1 class='italic text-4xl fw-bold'>1.</h1>
@@ -84,13 +86,13 @@
                 </div>
             </div>
             <div class='col-md-5 pt-3 pt-md-0'>
-                <img class='kebmut-img' src="{{ asset('images/tentang/tentangKami.jpg') }}" alt="">
+                <img class='kebmut-img' src="{{ asset('images/tentang/tentangKami.webp') }}" alt="">
             </div>
         </div>
     </section>
     <section class='mx-5'>
         <div class='desktop'>
-            <h1 class='text-3xl subtitle fw-bold text-center pt-5 pb-4'>SERTIFIKAT</h1>
+            <h1 class='text-3xl subtitle fw-bold text-center pt-5 pb-4'>Sertifikat</h1>
             <div class='grid-cols-3 pb-5'>
                 <button class='rounded sertif-button' onclick="showModal('{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.webp') }}')">
                     <img class='sertif-thumbnail border rounded' src="{{ asset('images/tentang/sertifikat/diniargeo/diniargeo.webp') }}" alt="">

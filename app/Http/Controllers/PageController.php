@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Atex;
+use App\Models\Item;
 use App\Models\Brand;
 use App\Models\Career;
 use App\Models\Labmed;
@@ -47,6 +48,14 @@ class PageController extends Controller
         }])->distinct()->get();
         return view('content.produk.subcategory', compact('category', 'subcategories'));
     }
+
+    public function subcategorySelengkapnya($c_alt, $s_alt) {
+        $category = Category::where('alt', $c_alt)->firstOrFail();
+        $subcategory = Subcategory::where('alt', $s_alt)->firstOrFail();
+        $items = $subcategory->item;
+        return view('content.produk.selengkapnya', compact('category', 'subcategory', 'items'));
+    }
+
     public function item($c_alt, $s_alt, $b_alt, $i_alt) {
         $category = Category::where('alt', $c_alt)->firstOrFail();
         $subcategory = Subcategory::where('alt', $s_alt)->firstOrFail();
@@ -66,7 +75,7 @@ class PageController extends Controller
 
     // Karir Page
     public function karir() {
-        $positions = Position::all();
+        $positions = Position::orderby('name', 'asc')->get();
         return view('content.karir.karir', compact('positions'));
     }
     public function karirPopup($alt) {
@@ -108,7 +117,6 @@ class PageController extends Controller
     public function tentang() {
         return view('content.tentang.tentang');
     }
-
     // Kontak Page
     public function kontak() {
         return view('content.kontak.kontak');
@@ -121,5 +129,11 @@ class PageController extends Controller
             'email' => $request->email,
         ]);
         return redirect('/')->with('status', 'Thankyou Very Much');
+    }
+
+    // GSC Page
+    public function gscIndex() {
+        $items = Item::where('brand_id', 1)->get();
+        return view('content.gsc.index', compact('items'));
     }
 }

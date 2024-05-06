@@ -3,10 +3,10 @@ function closePopup() {
     popupOverlay.style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    var popupOverlay = document.getElementById("popupOverlay");
-    popupOverlay.style.display = "block";
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     var popupOverlay = document.getElementById("popupOverlay");
+//     popupOverlay.style.display = "block";
+// });
 
 document.addEventListener("DOMContentLoaded", function() {
     function showMilestoneText(year) {
@@ -74,3 +74,23 @@ function showPopup() {
     popup.style.display = 'block';
     return false;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all milestone buttons
+    var milestoneButtons = document.querySelectorAll('.milestone-button');
+
+    // Add click event listener to each button
+    milestoneButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Remove 'clicked' class from all buttons
+            milestoneButtons.forEach(function(btn) {
+                btn.classList.remove('clicked');
+            });
+
+            // Add 'clicked' class to the clicked button
+            this.classList.add('clicked');
+        });
+    });
+});
+
+

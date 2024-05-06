@@ -10,13 +10,13 @@
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         {{-- Swiper CSS --}}
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9QNF58KZK"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-Z9QNF58KZK');
         </script>
     </head>
@@ -52,10 +52,10 @@
                     {{-- Title End --}}
                     {{-- Content Start --}}
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav flex-grow-1 pe-3 d-flex justify-content-center">
+                        <ul class="navbar-nav flex-grow-1 pe-3 d-flex justify-content-center align-items-center">
                             {{-- Links Start --}}
                             <li class="nav-item">
-                                <a class="nav-link mx-2" href="/">Beranda</a>
+                                <a class="nav-link mx-3" href="/">Beranda</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link mx-2" href="/tentang-kami">Tentang</a>
@@ -72,11 +72,19 @@
                             <li class="nav-item">
                                 <a class="nav-link mx-2" href="/kontak">Kontak</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="/gsc">Service Center</a>
+                            </li>
                             {{-- Links End --}}
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control px-3 text-md me-2 rounded-pill fst-italic" style='width: 15rem;' type="search" placeholder="Telusuri Produk Disini..." aria-label="Search">
-                        </form>
+                        {{-- Search Bar Start --}}
+                        <div class=''>
+                            <input name='search' id='search' class="form-control px-3 text-md me-2 rounded-pill fst-italic" type="search" placeholder="Telusuri Produk Disini...">
+                            <div id='content'>
+
+                            </div>
+                        </div>
+                        {{-- Search Bar End --}}
                     </div>
                 </div>
             </div>
@@ -332,6 +340,20 @@
                         spaceBetween: 0,
                     }
                 }
+            });
+        </script>
+        <script>
+            $('#search').on('keyup', function() {
+                var $value = $(this).val();
+                $.ajax({
+                    type: 'GET',
+                    url: "{{ URL::to('search') }}",
+                    data: {search: $value},
+                    success: function(data) {
+                        console.log(data);
+                        $('#content').html(data);
+                    }
+                });
             });
         </script>
     </body>

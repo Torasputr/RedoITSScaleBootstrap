@@ -53,7 +53,9 @@
 a {
     text-decoration: none;
 }
-
+.rounded-small {
+    border-radius: 10px;;
+}
 /* Header & Footer */
 header {
     position: fixed;
@@ -83,9 +85,15 @@ header {
 
 .nav-link {
     color: var(--primary);
+    border-bottom: 2px solid transparent; /* Start with transparent border */
+    text-decoration: none; /* Remove default underline */
+    padding-bottom: 5px; /* Adjust as needed */
+    transition-duration: 300ms;
 }
 .nav-link:hover {
+    border-bottom: solid 2px var(--secondary);
     color: var(--secondary);
+    transition-duration: 300ms;
 }
 
 .content {
@@ -383,6 +391,28 @@ footer {
 
 .item-card-brand {
     height: 50px;
+    border-radius: 10px;
+}
+
+.selengkapnya-card {
+    background-color: var(--gray-100);
+    transition-duration: 300ms;
+}
+.selengkapnya-card img {
+    width: 100%;
+    object-fit: cover;
+}
+.selengkapnya-card h1 {
+    color: black;
+    transition-duration: 300ms;
+}
+.selengkapnya-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    transition-duration: 300ms;
+}
+.selengkapnya-card:hover h1 {
+    color: var(--primary);
+    transition-duration: 300ms;
 }
 
 .whatsapp-icon {
@@ -457,7 +487,7 @@ footer {
 /* Karir */
 .karir-banner {
     width: 100%;
-    max-height: 400px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -615,8 +645,15 @@ footer {
 
 /* Tentang */
 .tentang-banner {
-    width: 100%;
-    max-height: 500px;
+    max-width: 100%;
+    min-height: 400px;
+    background-image: url('../images/tentang/banner.webp');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.tentang-banner .text {
+    color: white;
 }
 
 .tentang-body {
@@ -628,13 +665,20 @@ footer {
     height: 300px;
     width: 100%;
 }
-.milestone button {
+.milestone-button {
     background-color: white;
     border: solid 2px var(--primary);
     color: var(--primary);
+    transition-duration: 300ms;
 }
 
-.milestone button:hover {
+.milestone-button:hover {
+    background-color: var(--primary);
+    color: white;
+    transition-duration: 300ms;
+}
+
+.clicked {
     background-color: var(--primary);
     color: white;
     transition-duration: 300ms;
@@ -751,6 +795,100 @@ footer {
     border: 2px solid var(--primary);
     transition-duration: 300ms;
 }
+
+/* GSC  */
+.gsc-banner {
+    background-image: url('../images/serviceCenter/banner1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 500px;
+}
+
+.gsc-text {
+    font-size: 50px;
+}
+
+.gsc-textbox {
+    background-color: white;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 33%;
+}
+
+.gsc-item {
+    border: 3px solid var(--primary);
+    color: var(--primary);
+    height: 16rem;
+    transition-duration: 300ms;
+}
+
+.gsc1-item-mid {
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+}
+
+.gsc1-item-icon {
+    font-size: 150px;
+}
+
+.gsc1-item-text {
+    background-color: var(--gray-100);
+    width: auto;
+    display: inline-block;
+    border-left: solid 4px var(--secondary);
+}
+
+.gsc-item:hover {
+    transition-duration: 300ms;
+    background-color: var(--primary);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.gsc-appointment {
+    z-index: 99999;
+    border: 3px solid var(--primary);
+    color: var(--primary);
+    background-color: white;
+    transition-duration: 300ms;
+}
+.gsc-appointment-btn {
+    background-color: var(--primary);
+    color: white;
+    border: var(--primary);
+    transition-duration: 300ms;
+}
+
+.gsc-item-flexbox {
+    margin-top: -465px;
+}
+
+.cg-btn {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+}
+
+.status {
+    color: #35A739;
+}
+
+.klaim-box {
+    border: 2px solid black;
+}
+
+.klaim-input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black; /* Adjust the color and thickness as needed */
+    width: 100%;
+    outline: none; /* Optionally remove the default focus outline */
+}
+
 @media (min-width: 768px) {
     .mobile {
         display: none;
