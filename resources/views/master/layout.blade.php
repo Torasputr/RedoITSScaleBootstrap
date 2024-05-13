@@ -19,6 +19,8 @@
             gtag('js', new Date());
             gtag('config', 'G-Z9QNF58KZK');
         </script>
+        {{-- General JS Script --}}
+        <script defer src="{{ asset('js/script.js') }}"></script>
     </head>
     <body class='w-full overflow-x-hidden'>
         {{-- Navbar Start --}}
@@ -52,28 +54,28 @@
                     {{-- Title End --}}
                     {{-- Content Start --}}
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav flex-grow-1 pe-3 d-flex justify-content-center align-items-center">
+                        <ul class="navbar-nav flex-grow-1 gap-3 pe-3 d-flex justify-content-center align-items-center">
                             {{-- Links Start --}}
                             <li class="nav-item">
-                                <a class="nav-link mx-3" href="/">Beranda</a>
+                                <a class="nav-link" href="/">Beranda</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-2" href="/tentang-kami">Tentang</a>
+                                <a class="nav-link" href="/tentang-kami">Tentang</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-2" href="/artikel">Artikel</a>
+                                <a class="nav-link" href="/artikel">Artikel</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-2" href="/produk">Produk</a>
+                                <a class="nav-link" href="/produk">Produk</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-2" href="/karir">Karir</a>
+                                <a class="nav-link" href="/karir">Karir</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-2" href="/kontak">Kontak</a>
+                                <a class="nav-link" href="/kontak">Kontak</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-2" href="/gsc">Service Center</a>
+                                <a class="nav-link" href="/gsc">Service Center</a>
                             </li>
                             {{-- Links End --}}
                         </ul>

@@ -26,12 +26,12 @@
     {{-- Slider End --}}
     <section class='mx-5'>
         {{-- Kategori Start --}}
-        <div class='container-fluid'>
+        <div class='container-fluid hidden'>
             <h3 class='text-center subtitle fw-bold pt-5 pb-3'>KATEGORI PRODUK</h1>
             <div class='container'>
                 <div class='row pt-4'>
                     @foreach ($categories as $category)
-                        <div class='col-md-4 category-card-container'>
+                        <div class='col-md-4 category-card-container childnimate hidden'>
                             <a href="/produk/{{ $category->alt }}">
                                 <div class='card rounded p-3'>
                                     <img class='card-category-image rounded' src="{{ asset($category->image) }}" alt="">
@@ -50,19 +50,19 @@
             </div>
         </div>
         {{-- Kategori End --}}
-        <div class='container-fluid'>
+        <div class='container-fluid hidden'>
             {{-- Artikel Desktop Start --}}
             <div class='desktop'>
                 <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>ARTIKEL</h1>
                 <div class='grid-cols-2 artikel align-items-center'>
                     <a href="/artikel/{{ $latestArticle->id }}">
-                        <div class='artikel-container rounded p-3'>
+                        <div class='hidden childnimate artikel-container rounded p-3'>
                             <img class='artikel-image-beeg rounded' src="{{ asset($latestArticle->thumbnail) }}" alt="">
                             <h1 class='text-xl text-justify pt-3 text-truncate'>{{ $latestArticle->title }}</h1>
                             <h1 class='text-md fw-light text-justify pt-3 text-truncate text-end'>{{ $latestArticle->date }}</h1>
                         </div>
                     </a>
-                    <div class='grid-cols-2 artikel'>
+                    <div class='grid-cols-2 artikel hidden childnimate'>
                         @foreach($articles as $article)
                             <a href="artikel/{{ $article->id }}">
                                 <div class='artikel-container p-3 rounded'>
@@ -125,9 +125,9 @@
             <div class='desktop'>
                 <h1 class='subtitle text-center fw-bold text-3xl mt-3'>BRAND KAMI</h1>
                 <div class='brands-section swiper-container'>
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper d-flex align-items-center">
                         @foreach($brands as $brand)
-                        <div class="swiper-slide">
+                        <div class="swiper-slide d-flex justify-content-center">
                             <img class='brands-beranda' src="{{ asset($brand->image) }}" alt="">
                         </div>
                         @endforeach
@@ -151,14 +151,14 @@
             {{-- Brands Mobile End --}}
         </div>
         {{-- Client Start --}}
-        <div class='mb-5'>
+        <div class='mb-5 hidden'>
             <h1 class='text-center subtitle text-3xl fw-bold mb-4'>CLIENT KAMI</h1>
             <img class='img-fluid client' src="{{ asset('images/Beranda/Klien.webp') }}" alt="">
         </div>
         {{-- Client End --}}
         {{-- Youtube Desktop Start --}}
         <div class='youtube-beranda p-5'>
-            <div class='row align-items-center'>
+            <div class='row align-items-center hidden'>
                 <div class='col-md-6'>
                     <h1 class='text-center subtitle fw-bold'>Tonton Video Terbaru Kami Disini</h1>
                 </div>

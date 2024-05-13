@@ -5,7 +5,7 @@
         <h1 class='subtitle text-center fw-bold'>{{ $subcategory->name }}</h1>
         <div class='pt-5 row gap-5 justify-content-center'>
             @foreach ($items as $item)
-            <div class='col-md-3'>
+            <div class='col-mdz-3'>
                 <a href="/produk/{{ $category->alt }}/{{ $subcategory->alt }}/{{ $item->brand->alt }}/{{ $item->alt }}" class='card'>
                     <div class='p-3'>
                         <img class='card-image p-2 rounded' src="{{ asset($item->image) }}" alt="">

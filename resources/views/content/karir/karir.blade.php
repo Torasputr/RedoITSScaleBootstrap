@@ -15,7 +15,7 @@
         {{-- Career Card Start --}}
         <div class="row mx-5 gap-3 pb-5 justify-content-center align-items-stretch">
             @foreach($positions as $position)
-                <div class="col-md-3">
+                <div class="col-md-3 hidden childnimate">
                     <div class="career-card p-3 border rounded">
                         <h1 class='text-truncate text-lg'>{{ $position->name }}</h1>
                         <div class='pt-4 d-flex justify-content-center'>

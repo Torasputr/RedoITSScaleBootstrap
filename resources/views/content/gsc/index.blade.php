@@ -37,7 +37,7 @@
                 <h4 class='text-center fw-normal'>Terdapat 2 jasa servis yang kami berikan, pertama servis <span class='fst-italic'>on-site</span> dan kedua servis <span class='italic'>off-site</span>. Silahkan lengkapi form dan pilihlah jasa servis sesuai kebutuhan anda.</h4>
             </div>
         </div>
-        <div class='p-5 pt-0 pb-0'>
+        {{-- <div class='p-5 pt-0 pb-0'>
             <h3 class='subtitle fw-bold'>Cek Garansi</h3>
             <div class='p-3'>
                 <form action="">
@@ -56,53 +56,34 @@
                     </div>
                 </form>
             </div>
-        </div>
-        <div class='pt-5 pb-3 px-5'>
-            <h3 class='subtitle fw-bold pb-3'>Klaim Garansi</h3>
-            <div class='klaim-box rounded-small p-5'>
-                <form action="">
-                    @csrf
-                    <div class='row gap-5 justify-content-center align-items-center'>
-                        <div class='col-5'>
-                            <input class='klaim-input' type="text" placeholder="Input Serial Number" style='width: 100%'>
-                            <input class ='klaim-input mt-4' type="text" placeholder="Tanggal" style='width: 100%'>
-                            <input class ='klaim-input mt-4' type="text" placeholder="Kontak" style='width: 100%'>
-                        </div>
-                        <div class='col-5'>
-                            <input class='klaim-input ' type="text" placeholder="Input Serial Number" style='width: 100%'>
-                            <input class='klaim-input mt-4' type="text" placeholder="Input Serial Number" style='width: 100%'>
-                        </div>
-                    </div>
-                    <div class='d-flex justify-content-center'>
-                        <button class='cg-btn mt-5 px-3 fw-bold'>Klaim</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        </div> --}}
         <div class='pt-3 pb-5 px-5'>
             <h3 class='subtitle fw-bold pb-3'>Servis</h3>
             <div class='klaim-box rounded-small p-5'>
-                <form action="">
+                <form action="/gsc/service" method='POST'>
                     @csrf
-                        <div class='px-5 pb-2 d-flex align-items-center gap-5'>
-                            <div>
-                                <input type="radio" id="option1" name="option" value="option2">
-                                <label for="option1">On-site</label><br>
-                            </div>
-                            <div>
-                                <input type="radio" id="option2" name="option" value="option2">
-                                <label for="option2">Off-site</label><br>
-                            </div>
-                        </div>
                         <div class='row gap-5 justify-content-center align-items-center'>
                             <div class='col-5'>
-                                <input class='klaim-input' type="text" placeholder="Input Serial Number" style='width: 100%'>
-                                <input class ='klaim-input mt-4' type="text" placeholder="Tanggal" style='width: 100%'>
-                                <input class ='klaim-input mt-4' type="text" placeholder="Kontak" style='width: 100%'>
+                                <div class="input-wrapper">
+                                    <input class='klaim-input' name='sn' type="text" placeholder="Input Serial Number">
+                                    <i class="fa-solid fa-barcode"></i>
+                                </div>
+                                <div class='input-wrapper mt-4'>
+                                    <input class ='klaim-input' name='company' type="text" placeholder="Nama Perusahaan" style='width: 100%'>
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <div class='input-wrapper  mt-4'>
+                                    <input class ='klaim-input' type="text" name='phone' placeholder="Nomor" style='width: 100%'>
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
                             </div>
                             <div class='col-5'>
-                                <input class='klaim-input ' type="text" placeholder="Input Serial Number" style='width: 100%'>
-                                <input class='klaim-input mt-4' type="text" placeholder="Input Serial Number" style='width: 100%'>
+                                <label for="tanggal-janji-temu">Tanggal Janji Temu</label>
+                                <input class='klaim-input' type="date" name='tanggal' placeholder="Tanggal Janji Temu" style='width: 100%'>
+                                <div class='input-wrapper'>
+                                    <input class='klaim-input' type="text" name='address' placeholder="Alamat Perusahaan" style='width: 100%'>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
                             </div>
                         </div>
                         <div class='d-flex justify-content-center'>

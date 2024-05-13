@@ -56,6 +56,21 @@ a {
 .rounded-small {
     border-radius: 10px;;
 }
+
+/* Animation */
+.hidden {
+    opacity: 0;
+    filter: blur(1);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 /* Header & Footer */
 header {
     position: fixed;
@@ -84,14 +99,28 @@ header {
 }
 
 .nav-link {
+    position: relative;
     color: var(--primary);
-    border-bottom: 2px solid transparent; /* Start with transparent border */
-    text-decoration: none; /* Remove default underline */
-    padding-bottom: 5px; /* Adjust as needed */
-    transition-duration: 300ms;
 }
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transition: 0.3s;
+    border-radius: 25px;
+    transform: scaleX(0);
+    background: var(--secondary);
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+
 .nav-link:hover {
-    border-bottom: solid 2px var(--secondary);
     color: var(--secondary);
     transition-duration: 300ms;
 }
@@ -224,6 +253,31 @@ footer {
 .subtitle {
     color: var(--primary);
 }
+
+.childnimate:nth-child(1) {
+    transition-delay: 100ms;
+}
+
+.childnimate:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.childnimate:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.childnimate:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.childnimate:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+.childnimate:nth-child(6) {
+    transition-delay: 600ms;
+}
+
 .card-category-image {
     width: 100%;
     object-fit: cover;
@@ -645,15 +699,16 @@ footer {
 
 /* Tentang */
 .tentang-banner {
-    max-width: 100%;
-    min-height: 400px;
     background-image: url('../images/tentang/banner.webp');
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    height: 200px;
 }
 
 .tentang-banner .text {
     color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 10);
 }
 
 .tentang-body {
@@ -880,14 +935,26 @@ footer {
     border: 2px solid black;
 }
 
-.klaim-input {
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid black; /* Adjust the color and thickness as needed */
+.input-wrapper {
+    position: relative;
+  }
+
+  .klaim-input {
+    padding: 10px;
     width: 100%;
-    outline: none; /* Optionally remove the default focus outline */
-}
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .input-wrapper i {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+    pointer-events: none;
+  }
 
 @media (min-width: 768px) {
     .mobile {
@@ -946,5 +1013,8 @@ footer {
     }
     .category-name {
         font-size: xx-large;
+    }
+    .tentang-banner {
+        height: 400px;
     }
 }
