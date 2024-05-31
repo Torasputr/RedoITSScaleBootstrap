@@ -25,5 +25,6 @@ Route::get('/tentang-kami', [PageController::class, 'tentang']);
 Route::get('/kontak', [PageController::class, 'kontak']);
 // GSC Page
 Route::get('/gsc', [PageController::class, 'gscIndex']);
+Route::post('/gsc/service', [PageController::class, 'gscSubmit']);
 // Footer
 Route::post('/newuser', [PageController::class, 'newuser']);

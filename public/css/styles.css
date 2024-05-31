@@ -62,7 +62,7 @@ a {
     opacity: 0;
     filter: blur(1);
     transform: translateX(-100%);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .show {
@@ -895,29 +895,14 @@ footer {
     border-left: solid 4px var(--secondary);
 }
 
-.gsc-item:hover {
+.gschover {
     transition-duration: 300ms;
-    background-color: var(--primary);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-    color: white;
 }
 
-.gsc-appointment {
-    z-index: 99999;
-    border: 3px solid var(--primary);
+.gschover:hover {
     color: var(--primary);
-    background-color: white;
+    border: solid 4px var(--primary);
     transition-duration: 300ms;
-}
-.gsc-appointment-btn {
-    background-color: var(--primary);
-    color: white;
-    border: var(--primary);
-    transition-duration: 300ms;
-}
-
-.gsc-item-flexbox {
-    margin-top: -465px;
 }
 
 .cg-btn {
@@ -925,6 +910,13 @@ footer {
     color: white;
     border-radius: 10px;
     border: 2px solid var(--primary);
+    transition-duration: 300ms;
+}
+
+.cg-btn:hover {
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+    transition-duration: 300ms;
 }
 
 .status {
@@ -939,7 +931,7 @@ footer {
     position: relative;
   }
 
-  .klaim-input {
+ .klaim-input {
     padding: 10px;
     width: 100%;
     border: 1px solid #ccc;

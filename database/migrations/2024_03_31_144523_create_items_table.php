@@ -16,7 +16,6 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('brand_id')->constrained('brands')->onDelete('cascade');
             $table->string('name');
-            $table->string('description');
             $table->string('image');
             $table->string('alt');
             $table->string('brochure');

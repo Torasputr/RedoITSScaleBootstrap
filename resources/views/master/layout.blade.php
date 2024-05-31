@@ -322,6 +322,7 @@
                 slidesPerView: 1,
                 spaceBetween: 10,
                 loop: true,
+                centeredSlides: true,
                 // Add navigation buttons
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -330,15 +331,15 @@
                 // Optional: Add breakpoints for responsive design
                 breakpoints: {
                     640: {
-                        slidesPerView: 1,
+                        slidesPerView: 4,
                         spaceBetween: 0,
                     },
                     768: {
-                        slidesPerView: 1,
+                        slidesPerView: 4,
                         spaceBetween: 0
                     },
                     1024: {
-                        slidesPerView: 2,
+                        slidesPerView: 4,
                         spaceBetween: 0,
                     }
                 }

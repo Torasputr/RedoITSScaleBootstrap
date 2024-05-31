@@ -14,6 +14,15 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('type');
+            $table->string('sn');
+            $table->string('name');
+            $table->string('sales');
+            $table->string('company');
+            $table->string('phone');
+            $table->date('tanggal');
+            $table->string('address');
+            $table->text('keterangan');
         });
     }
 

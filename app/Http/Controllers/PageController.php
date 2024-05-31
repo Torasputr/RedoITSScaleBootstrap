@@ -23,11 +23,13 @@ use App\Models\Sublogindus;
 use Illuminate\Http\Request;
 use App\Models\HomepageSlider;
 use App\Models\JobApplication;
+use App\Models\Service;
 
 class PageController extends Controller
 {
     // Beranda Page
-    public function beranda() {
+    public function beranda()
+    {
         $sliders = HomepageSlider::orderBy('id', 'desc')->take(3)->get();
         $categories = Category::latest()->take(3)->get();
         $latestArticle = Article::orderBy('date', 'desc')->first();
@@ -37,11 +39,13 @@ class PageController extends Controller
     }
 
     // Produk Page
-    public function kategori() {
+    public function kategori()
+    {
         $categories = Category::all();
         return view('content.produk.kategori', compact('categories'));
     }
-    public function subcategory($alt) {
+    public function subcategory($alt)
+    {
         $category = Category::where('alt', $alt)->firstOrFail();
         $subcategories = $category->subcategory()->with(['item' => function ($query) use ($category) {
             $query->where('category_id', '=', $category->id);
@@ -49,14 +53,16 @@ class PageController extends Controller
         return view('content.produk.subcategory', compact('category', 'subcategories'));
     }
 
-    public function subcategorySelengkapnya($c_alt, $s_alt) {
+    public function subcategorySelengkapnya($c_alt, $s_alt)
+    {
         $category = Category::where('alt', $c_alt)->firstOrFail();
         $subcategory = Subcategory::where('alt', $s_alt)->firstOrFail();
         $items = $subcategory->item;
         return view('content.produk.selengkapnya', compact('category', 'subcategory', 'items'));
     }
 
-    public function item($c_alt, $s_alt, $b_alt, $i_alt) {
+    public function item($c_alt, $s_alt, $b_alt, $i_alt)
+    {
         $category = Category::where('alt', $c_alt)->firstOrFail();
         $subcategory = Subcategory::where('alt', $s_alt)->firstOrFail();
         $item = $subcategory->item()->where('alt', $i_alt)->firstOrFail();
@@ -64,34 +70,40 @@ class PageController extends Controller
     }
 
     // Artikel Page
-    public function artikel() {
+    public function artikel()
+    {
         $articles = Article::orderBy('date', 'desc')->simplePaginate(9);
         return view('content.artikel.artikel', compact('articles'));
     }
-    public function artikelDetail($id) {
+    public function artikelDetail($id)
+    {
         $article = Article::findOrFail($id);
         return view('content.artikel.artikelDetail', compact('article'));
     }
 
     // Karir Page
-    public function karir() {
+    public function karir()
+    {
         $positions = Position::orderby('name', 'asc')->get();
         return view('content.karir.karir', compact('positions'));
     }
-    public function karirPopup($alt) {
+    public function karirPopup($alt)
+    {
         $position = Position::where('alt', $alt)->firstOrFail();
         return view('content.karir.popup', compact('position'));
     }
-    public function register($alt) {
+    public function register($alt)
+    {
         $position = Position::where('alt', $alt)->firstOrFail();
         return view('content.karir.form', compact('position'));
     }
-    public function submit($alt, Request $request) {
+    public function submit($alt, Request $request)
+    {
         $position = Position::where('alt', $alt)->firstOrFail();
         $request->validate([
             'name' => 'required',
             'cv' => 'required',
-            'email' => 'required|email',
+            'email' => 'required',
             'phone' => 'required',
             'address' => 'required',
             'currentcompany' => 'nullable',
@@ -114,14 +126,17 @@ class PageController extends Controller
     }
 
     // Tentang Page
-    public function tentang() {
+    public function tentang()
+    {
         return view('content.tentang.tentang');
     }
     // Kontak Page
-    public function kontak() {
+    public function kontak()
+    {
         return view('content.kontak.kontak');
     }
-    public function newuser(Request $request) {
+    public function newuser(Request $request)
+    {
         $request->validate([
             'email' => 'required',
         ]);
@@ -132,8 +147,36 @@ class PageController extends Controller
     }
 
     // GSC Page
-    public function gscIndex() {
+    public function gscIndex()
+    {
         $items = Item::where('brand_id', 1)->get();
         return view('content.gsc.index', compact('items'));
+    }
+
+    public function gscSubmit(Request $request) {
+        $request->validate([
+            'type' => 'required|in:on-site, off-site',
+            'sn' => 'required',
+            'name' => 'required',
+            'sales' => 'required',
+            'company' => 'required',
+            'phone' => 'required',
+            'tanggal' => 'required',
+            'address' => 'required',
+            'keterangan' => 'required',
+        ]);
+
+        Service::create([
+            'type' => $request->type,
+            'sn' => $request->sn,
+            'name' => $request->name,
+            'sales' => $request->sales,
+            'company' => $request->company,
+            'phone' => $request->phone,
+            'tanggal' => $request->tanggal,
+            'address' => $request->address,
+            'keterangan' => $request->keterangan,
+        ]);
+        return redirect('/gsc')->with('status', 'Sukses');
     }
 }

@@ -27,7 +27,7 @@
     <section class='mx-5'>
         {{-- Kategori Start --}}
         <div class='container-fluid hidden'>
-            <h3 class='text-center subtitle fw-bold pt-5 pb-3'>KATEGORI PRODUK</h1>
+            <h3 class='text-center subtitle fw-bold pt-5 pb-3'>Kategori Produk</h1>
             <div class='container'>
                 <div class='row pt-4'>
                     @foreach ($categories as $category)
@@ -44,7 +44,7 @@
                         </div>
                     @endforeach
                     <div class='d-flex justify-content-end '>
-                        <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>SELENGKAPNYA >></a>
+                        <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>Selengkapnya >></a>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
         <div class='container-fluid hidden'>
             {{-- Artikel Desktop Start --}}
             <div class='desktop'>
-                <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>ARTIKEL</h1>
+                <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>Artikel</h1>
                 <div class='grid-cols-2 artikel align-items-center'>
                     <a href="/artikel/{{ $latestArticle->id }}">
                         <div class='hidden childnimate artikel-container rounded p-3'>
@@ -65,7 +65,7 @@
                     <div class='grid-cols-2 artikel hidden childnimate'>
                         @foreach($articles as $article)
                             <a href="artikel/{{ $article->id }}">
-                                <div class='artikel-container p-3 rounded'>
+                                <div class='artikel-container p-3 rounded hidden childnimate'>
                                     <img class='artikel-image-smol rounded' src="{{ asset($article->thumbnail) }}" alt="">
                                     <h1 class='text-lg text-justify pt-3 text-truncate'>{{ $article->title }}</h1>
                                     <h1 class='text-sm fw-light text-justify text-truncate text-end'>{{ $article->date }}</h1>
@@ -75,13 +75,13 @@
                     </div>
                 </div>
                 <div class='d-flex justify-content-end '>
-                    <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>SELENGKAPNYA >></a>
+                    <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>Selengkapnya >></a>
                 </div>
             </div>
             {{-- Artikel Dekstop End --}}
             {{-- Artikel Mobile Start --}}
             <div class='mobile'>
-                <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>ARTIKEL</h1>
+                <h1 class='text-center pb-5 pt-5 pt-2 text-3xl fw-bold subtitle'>Artikel</h1>
                 <div class='d-flex flex-column'>
                     <div>
                         <a href="/artikel/{{ $latestArticle->id }}">
@@ -112,7 +112,7 @@
                     </div>
                     @endforeach
                     <div class='d-flex justify-content-end '>
-                        <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>SELENGKAPNYA >></a>
+                        <a href='/produk' class='selengkapnya pt-md-4 pt-2 fw-bold fs-6 '>Selengkapnya >></a>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
         <div class='container-fluid'>
             {{-- Brands Desktop Start --}}
             <div class='desktop'>
-                <h1 class='subtitle text-center fw-bold text-3xl mt-3'>BRAND KAMI</h1>
+                <h1 class='subtitle text-center fw-bold text-3xl mt-3'>Brand Kami</h1>
                 <div class='brands-section swiper-container'>
                     <div class="swiper-wrapper d-flex align-items-center">
                         @foreach($brands as $brand)
@@ -137,7 +137,7 @@
             {{-- Brands Desktop End --}}
             {{-- Brands Mobile Start --}}
             <div class='mobile'>
-                <h1 class='subtitle text-center fw-bold text-3xl mt-5'>BRAND KAMI</h1>
+                <h1 class='subtitle text-center fw-bold text-3xl mt-5'>Brand Kami</h1>
                 <div class='brands-section-mobile swiper-container'>
                     <div class="swiper-wrapper">
                         @foreach($brands as $brand)
@@ -152,7 +152,7 @@
         </div>
         {{-- Client Start --}}
         <div class='mb-5 hidden'>
-            <h1 class='text-center subtitle text-3xl fw-bold mb-4'>CLIENT KAMI</h1>
+            <h1 class='text-center subtitle text-3xl fw-bold mb-4'>Client Kami</h1>
             <img class='img-fluid client' src="{{ asset('images/Beranda/Klien.webp') }}" alt="">
         </div>
         {{-- Client End --}}
@@ -163,7 +163,7 @@
                     <h1 class='text-center subtitle fw-bold'>Tonton Video Terbaru Kami Disini</h1>
                 </div>
                 <div class='col-md-6 pt-5 pt-md-0 d-flex justify-content-center embed-responsive embed-responsive-16by9'>
-                    <iframe class='rounded' width="560" height="315" src="https://www.youtube.com/embed/bes6qxPQsHo?si=6kYmbK8RLQ1bZiN6 " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class='rounded' width="560" height="315" src="https://www.youtube.com/embed/V5cgW1Sjf1o?si=-WxGHw69RcuCgEpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
